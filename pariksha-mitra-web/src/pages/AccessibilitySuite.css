@@ -1,0 +1,306 @@
+/* ==========================================================
+   UNIVERSAL ACCESSIBILITY SUITE (STUDENT DASHBOARD VISUAL STANDARD)
+   ========================================================== */
+
+.access-root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1A1C1C;
+  padding-bottom: 60px;
+  transition: all 0.3s ease;
+}
+
+/* High Contrast Global Override */
+.access-root.mode-contrast {
+  background: #000000 !important;
+  color: #FFFF00 !important;
+}
+
+.access-root.mode-contrast .access-card {
+  background: #111111 !important;
+  border-color: #FFFF00 !important;
+  color: #FFFF00 !important;
+}
+
+.access-root.mode-contrast h3,
+.access-root.mode-contrast strong,
+.access-root.mode-contrast p,
+.access-root.mode-contrast span {
+  color: #FFFF00 !important;
+}
+
+/* Dyslexic Font Mode */
+.access-root.mode-dyslexic {
+  font-family: 'Comic Sans MS', 'OpenDyslexic', sans-serif !important;
+  letter-spacing: 0.8px;
+}
+
+.access-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(2, 74, 0, 0.35);
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  color: #86EFAC;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.access-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Card Base */
+.access-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.acard-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 12px;
+}
+
+.acard-head h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.acard-head .hi {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+/* Presets Grid */
+.presets-button-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 12px;
+}
+
+.preset-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F8FAFC;
+  border: 2px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 14px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #0F172A;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  text-align: left;
+}
+
+.preset-btn:hover {
+  border-color: #0033A0;
+  background: #FFFFFF;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+.preset-btn.reset {
+  color: #64748B;
+  border-style: dashed;
+}
+
+/* Dual Grid */
+.access-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .access-dual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.access-controls-column {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Switch Rows */
+.switch-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 8px 0;
+}
+
+.switch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.switch-info strong {
+  font-size: 14px;
+  color: #0F172A;
+}
+
+.switch-info span {
+  font-size: 12px;
+  color: #64748B;
+  line-height: 1.4;
+}
+
+/* Toggle Switch */
+.gov-toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 48px;
+  height: 26px;
+  flex-shrink: 0;
+}
+
+.gov-toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.gov-toggle-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: #CBD5E1;
+  transition: .3s;
+  border-radius: 26px;
+}
+
+.gov-toggle-slider:before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  width: 20px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: .3s;
+  border-radius: 50%;
+}
+
+.gov-toggle-switch input:checked + .gov-toggle-slider {
+  background-color: #16A34A;
+}
+
+.gov-toggle-switch input:checked + .gov-toggle-slider:before {
+  transform: translateX(22px);
+}
+
+/* Font Pills */
+.font-pills {
+  display: flex;
+  gap: 6px;
+}
+
+.font-size-pill {
+  padding: 6px 12px;
+  border-radius: 8px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #475569;
+  cursor: pointer;
+}
+
+.font-size-pill.active {
+  background: #0033A0;
+  color: #FFFFFF;
+  border-color: #0033A0;
+}
+
+/* Preview Box */
+.preview-card {
+  height: 100%;
+}
+
+.preview-content-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 14px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.preview-card.font-large .preview-content-box {
+  font-size: 17px;
+}
+
+.preview-card.font-huge .preview-content-box {
+  font-size: 20px;
+}
+
+.preview-lesson-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0033A0;
+  margin: 0;
+}
+
+.preview-body-text {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: #0F172A;
+  margin: 0;
+}
+
+.preview-hi-text {
+  font-size: 13px;
+  line-height: 1.5;
+  color: #475569;
+  margin: 0;
+  border-top: 1px dashed #CBD5E1;
+  padding-top: 8px;
+}
+
+.isl-avatar-mock {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #FE6500;
+  color: #FFFFFF;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 10px;
+  margin-top: 8px;
+}
+
+.preview-footer-note {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #15803D;
+  margin-top: auto;
+}

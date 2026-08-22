@@ -1,0 +1,216 @@
+.scheduler-page {
+  padding: 24px;
+  background-color: var(--color-background, #F9F9F9);
+  min-height: 100vh;
+}
+
+.scheduler-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 24px;
+}
+
+.scheduler-header h1 {
+  font-size: 28px;
+  margin: 0;
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.scheduler-layout {
+  display: flex;
+  gap: 24px;
+}
+
+.calendar-view {
+  flex: 2;
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 20px;
+  border: 1px solid #E0E0E0;
+  min-height: 500px;
+}
+
+.mock-calendar {
+  margin-top: 20px;
+  border: 1px solid #E0E0E0;
+  border-radius: 8px;
+  padding: 16px;
+  background: #F9F9F9;
+}
+
+.mock-day {
+  background: white;
+  border: 1px solid #E0E0E0;
+  padding: 12px;
+  border-radius: 4px;
+  min-height: 100px;
+}
+
+.mock-day .date {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.event {
+  padding: 4px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  margin-bottom: 4px;
+  color: white;
+}
+.event.blue { background: var(--color-primary); }
+.event.green { background: var(--color-tertiary); }
+
+.upcoming-list {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.upcoming-list h2 {
+  margin: 0;
+  font-size: 20px;
+}
+
+.upcoming-card {
+  background: white;
+  border-radius: var(--radius-lg);
+  padding: 16px;
+  border: 1px solid #E0E0E0;
+}
+
+.card-top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.exam-badge {
+  background: #E0E0E0;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+.time {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--color-outline);
+}
+
+.upcoming-card h3 {
+  margin: 0 0 4px 0;
+  font-size: 16px;
+}
+
+.upcoming-card p {
+  margin: 0 0 12px 0;
+  font-size: 14px;
+  color: var(--color-outline);
+}
+
+.card-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-size: 12px;
+  color: var(--color-outline);
+  margin-bottom: 16px;
+}
+
+.card-stats span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.card-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-outline-sm {
+  flex: 1;
+  background: white;
+  border: 1px solid #C4C5D5;
+  padding: 6px 0;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+}
+
+.btn-outline-sm.red {
+  color: var(--color-error);
+  border-color: var(--color-error);
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background: white;
+  padding: 24px;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 500px;
+}
+
+.schedule-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 20px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.form-row {
+  display: flex;
+  gap: 16px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+
+.schedule-form input, .schedule-form select {
+  padding: 10px;
+  border: 1px solid #C4C5D5;
+  border-radius: var(--radius-md);
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  margin-top: 24px;
+}

@@ -1,0 +1,345 @@
+/* ==========================================================
+   CAREER GUIDANCE ENGINE (PREMIUM STUDENT AESTHETIC)
+   ========================================================== */
+
+.cg-root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1A1C1C;
+  padding-bottom: 60px;
+}
+
+.cg-hero-pills {
+  display: flex;
+  align-items: center;
+}
+
+.cg-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+/* Workspace Grid */
+.cg-workspace-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 1. Exam Match Showcase Grid */
+.cg-match-showcase-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.cg-exam-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px;
+  border: 2px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.cg-exam-card:hover {
+  transform: translateY(-3px);
+  border-color: #0033A0;
+  box-shadow: 0 10px 28px rgba(0, 51, 160, 0.12);
+}
+
+.cg-exam-card.active-exam {
+  border-color: #FE6500;
+  background: #FFFDFB;
+  box-shadow: 0 8px 24px rgba(254, 101, 0, 0.15);
+}
+
+.cg-exam-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.cg-match-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(0, 51, 160, 0.1);
+  color: #0033A0;
+  padding: 4px 10px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.cg-match-badge.gold {
+  background: linear-gradient(135deg, #FE6500 0%, #E05300 100%);
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(254, 101, 0, 0.35);
+}
+
+.cg-tag-pill {
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+  background: #F1F5F9;
+  padding: 2px 8px;
+  border-radius: 6px;
+}
+
+.cg-exam-name {
+  font-size: 17px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.cg-role-desc {
+  font-size: 12.5px;
+  color: #475569;
+  margin: 0 0 14px 0;
+  line-height: 1.4;
+}
+
+.cg-exam-meta-block {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+
+.cg-meta-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  color: #334155;
+}
+
+.cg-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 10px;
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.cg-select-indicator {
+  font-weight: 700;
+  color: #FE6500;
+}
+
+/* 2. Dual Panels */
+.cg-dual-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .cg-dual-columns {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cg-panel-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+}
+
+.cg-panel-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 12px;
+}
+
+.cg-panel-title-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.cg-panel-title {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.cg-panel-title .hi {
+  font-size: 13px;
+  color: #64748B;
+  font-weight: 500;
+}
+
+.cg-score-pill, .cg-ladder-tag {
+  font-size: 11px;
+  font-weight: 700;
+  background: #F1F5F9;
+  color: #475569;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.cg-score-pill {
+  background: rgba(0, 51, 160, 0.1);
+  color: #0033A0;
+}
+
+/* Aptitude Pills */
+.cg-apt-pills-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 14px;
+}
+
+.cg-apt-pill {
+  flex: 1;
+  min-width: 80px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 6px 8px;
+  text-align: center;
+}
+
+.apt-name {
+  display: block;
+  font-size: 10.5px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.apt-val {
+  display: block;
+  font-size: 13px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 2px 0;
+}
+
+.apt-lvl {
+  font-size: 9.5px;
+  font-weight: 700;
+  color: #15803D;
+}
+
+/* Career Ladder Steps */
+.cg-ladder-desc {
+  font-size: 13px;
+  color: #475569;
+  margin: 0 0 16px 0;
+}
+
+.cg-roadmap-steps {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.cg-step-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 12px 14px;
+}
+
+.cg-step-num-pill {
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #FFFFFF;
+  background: #0033A0;
+  padding: 3px 8px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.cg-step-content {
+  flex: 1;
+}
+
+.cg-step-rank {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 2px 0;
+}
+
+.cg-step-pay {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  color: #16A34A;
+  margin-bottom: 4px;
+}
+
+.cg-step-scope {
+  font-size: 11.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.cg-action-box {
+  margin-top: auto;
+}
+
+.cg-start-prep-btn {
+  width: 100%;
+  height: 48px;
+  background: #0033A0;
+  color: #FFFFFF;
+  border: none;
+  border-radius: 12px;
+  font-size: 13.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(0, 51, 160, 0.3);
+  transition: all 0.2s ease;
+}
+
+.cg-start-prep-btn:hover {
+  background: #00216E;
+  transform: translateY(-2px);
+}

@@ -1,0 +1,526 @@
+﻿/* ==========================================================
+   GEOSPATIAL MAP & INFRASTRUCTURE RADAR - STYLES
+   ========================================================== */
+
+.geospatial-map-page {
+  padding: 24px 32px 48px;
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* 1. Map Top Header */
+.map-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.map-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.geo-tag {
+  background: #EBF2FF;
+  border: 1px solid #BFDBFE;
+  color: #002B7F;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.dist-count-tag {
+  background: #DCFCE7;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.sovereign-tag {
+  background: #FEF3C7;
+  border: 1px solid #FDE68A;
+  color: #92400E;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.map-title-block h1 {
+  font-size: 20px;
+  font-weight: 900;
+  color: #00216E;
+  margin: 0;
+}
+
+.map-title-block p {
+  font-size: 12px;
+  color: #64748B;
+  margin: 2px 0 0 0;
+}
+
+.btn-drill-analytics {
+  background: #002B7F;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.2s;
+}
+
+.btn-drill-analytics:hover {
+  background: #001A4D;
+}
+
+/* 2. Controls Ribbon */
+.map-controls-ribbon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 12px 18px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.03);
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.category-toggle-group, .layer-selector-group, .zone-filter-group {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.ctrl-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #002B7F;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cat-btn, .layer-btn {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.cat-btn:hover, .layer-btn:hover {
+  background: #E2E8F0;
+}
+
+.cat-btn.active, .layer-btn.active {
+  background: #002B7F;
+  color: white;
+  border-color: #002B7F;
+}
+
+.zone-pill {
+  background: transparent;
+  border: 1px solid #CBD5E1;
+  color: #64748B;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.zone-pill.active {
+  background: #FE6500;
+  color: white;
+  border-color: #FE6500;
+}
+
+/* 3. Workspace Grid */
+.map-workspace-grid {
+  display: grid;
+  grid-template-columns: 1.55fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .map-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.interactive-map-canvas-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.canvas-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.canvas-header-row h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #00216E;
+  margin: 0 0 2px 0;
+}
+
+.canvas-header-row p {
+  font-size: 11.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.map-legend-pill {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 10.5px;
+  font-weight: 800;
+  color: #002B7F;
+  background: #EBF2FF;
+  padding: 3px 8px;
+  border-radius: 4px;
+}
+
+/* Native SVG Map */
+.svg-map-wrapper {
+  background: #FFFFFF;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 14px rgba(0, 33, 110, 0.05);
+}
+
+.pan-india-vector-svg {
+  width: 100%;
+  max-height: 620px;
+}
+
+.state-vector-group {
+  transition: all 0.2s ease;
+}
+
+.state-boundary-polygon {
+  transition: all 0.2s ease;
+}
+
+.state-vector-group:hover .state-boundary-polygon {
+  filter: brightness(1.08) drop-shadow(0 2px 6px rgba(0, 33, 110, 0.3));
+  stroke: #FE6500 !important;
+  stroke-width: 2.8px !important;
+}
+
+.state-vector-group.selected .state-boundary-polygon {
+  stroke: #FE6500 !important;
+  stroke-width: 3.5px !important;
+  filter: drop-shadow(0 4px 10px rgba(254, 101, 0, 0.4));
+}
+
+.state-name-svg-label {
+  user-select: none;
+  pointer-events: none;
+  font-family: inherit;
+}
+
+/* Static Server Pin Nodes */
+.server-pin-node {
+  pointer-events: none;
+}
+
+/* Official Survey of India Footer Metadata */
+.soi-map-footer-metadata {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 10px 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.soi-footer-badge {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  color: #002B7F;
+}
+
+.soi-disclaimer-text {
+  margin: 0;
+  font-size: 10px;
+  color: #64748B;
+  font-style: italic;
+}
+
+/* 4. Side Inspector */
+.map-side-inspector {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.inspected-state-card {
+  background: white;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 4px 12px rgba(0, 33, 110, 0.08);
+}
+
+.inspect-header-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #F1F5F9;
+  margin-bottom: 10px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.ins-title-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.ins-code-badge {
+  background: #002B7F;
+  color: white;
+  font-size: 14px;
+  font-weight: 900;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.ins-title-row h4 {
+  font-size: 16px;
+  font-weight: 900;
+  color: #00216E;
+  margin: 0;
+}
+
+.ins-type-pill {
+  font-size: 10.5px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.constitutional-note-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 10.5px;
+  font-weight: 700;
+  color: #002B7F;
+  margin-bottom: 12px;
+}
+
+.btn-drill-state {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #002B7F;
+  font-size: 11.5px;
+  font-weight: 700;
+  padding: 5px 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.inspect-metrics-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.ins-m-item {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+}
+
+.m-title {
+  font-size: 10px;
+  font-weight: 700;
+  color: #64748B;
+  margin-bottom: 2px;
+}
+
+.m-val {
+  font-size: 15px;
+  font-weight: 900;
+}
+
+.m-val.text-blue { color: #002B7F; }
+.m-val.text-saffron { color: #FE6500; }
+.m-val.text-green { color: #15803D; }
+.m-val.text-red { color: #C2410C; }
+.m-val.text-teal { color: #0D9488; }
+.m-val.text-gray { color: #475569; }
+
+/* 5. Aspirational Spotlight Card */
+.aspirational-spotlight-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.spotlight-title-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+}
+
+.spotlight-title-row h4 {
+  font-size: 13.5px;
+  font-weight: 800;
+  color: #00216E;
+  margin: 0;
+}
+
+.spotlight-title-row p {
+  font-size: 10.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.aspirational-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.asp-item-row {
+  background: #FFF8F3;
+  border: 1px solid #FED7AA;
+  border-radius: 6px;
+  padding: 8px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.asp-info strong {
+  display: block;
+  font-size: 12px;
+  color: #002B7F;
+}
+
+.asp-info span {
+  font-size: 10.5px;
+  color: #64748B;
+}
+
+.asp-flag-badge {
+  background: #FE6500;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+/* 6. MeghRaj Cloud Nodes Monitor */
+.meghraj-nodes-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.nodes-title-row {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.nodes-title-row h4 {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #00216E;
+  margin: 0;
+}
+
+.node-status-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.node-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 6px 10px;
+  border-radius: 6px;
+}
+
+.node-name {
+  font-weight: 700;
+  color: #334155;
+}
+
+.node-status-ok {
+  color: #15803D;
+  font-weight: 800;
+}

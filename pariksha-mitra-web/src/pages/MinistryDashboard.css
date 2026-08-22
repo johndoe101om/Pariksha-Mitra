@@ -1,0 +1,692 @@
+﻿/* ==========================================================
+   MINISTRY EXECUTIVE COMMAND DASHBOARD - STYLES
+   ========================================================== */
+
+.ministry-executive-dashboard {
+  padding: 24px 32px 48px;
+  background-color: #F8FAFC;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* 1. Official Command Top Header */
+.command-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.command-brand-block {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.command-badge-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 4px;
+}
+
+.scheme-tag {
+  background: #EBF2FF;
+  border: 1px solid #BFDBFE;
+  color: #002B7F;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.cloud-tag {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.status-live-tag {
+  background: #DCFCE7;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.pulse-dot-green {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #16A34A;
+  animation: pulse-green 1.5s infinite;
+}
+
+@keyframes pulse-green {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.3); opacity: 0.5; }
+}
+
+.command-main-title {
+  font-size: 22px;
+  font-weight: 900;
+  color: #00216E;
+  margin: 0;
+}
+
+.command-sub-title {
+  font-size: 12.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.command-actions-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.ist-clock-chip {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #0033A0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-cmd-secondary {
+  background: white;
+  border: 1.5px solid #CBD5E1;
+  color: #334155;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: all 0.2s;
+}
+
+.btn-cmd-secondary:hover {
+  background: #F1F5F9;
+  border-color: #94A3B8;
+}
+
+.btn-cmd-primary {
+  background: #002B7F;
+  border: none;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  box-shadow: 0 2px 6px rgba(0, 43, 127, 0.25);
+  transition: background 0.2s;
+}
+
+.btn-cmd-primary:hover {
+  background: #001A4D;
+}
+
+/* 2. Executive KPI Cards */
+.executive-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .executive-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .executive-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.exec-kpi-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 18px 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+}
+
+.exec-kpi-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5px;
+}
+
+.exec-kpi-card.highlight-blue::before { background: #002B7F; }
+.exec-kpi-card.highlight-saffron::before { background: #FE6500; }
+.exec-kpi-card.highlight-green::before { background: #024A00; }
+.exec-kpi-card.highlight-red::before { background: #DC2626; }
+
+.kpi-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.kpi-label {
+  font-size: 11px;
+  font-weight: 800;
+  color: #64748B;
+  letter-spacing: 0.5px;
+}
+
+.kpi-icon-wrap {
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.kpi-icon-wrap.blue { background: #EBF2FF; }
+.kpi-icon-wrap.saffron { background: #FFF0E5; }
+.kpi-icon-wrap.green { background: #DCFCE7; }
+.kpi-icon-wrap.red { background: #FEECEC; }
+
+.kpi-big-number {
+  font-size: 28px;
+  font-weight: 900;
+  color: #00216E;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+
+.kpi-footer-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11.5px;
+}
+
+.trend-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  font-weight: 700;
+}
+
+.trend-badge.positive { color: #16A34A; }
+.trend-badge.neutral { color: #0284C7; }
+
+.meta-subtext {
+  color: #64748B;
+  font-weight: 600;
+}
+
+/* 3. Analytics Dual Section */
+.analytics-dual-section {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .analytics-dual-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+.analytics-panel-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+}
+
+.panel-card-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.panel-card-head h3 {
+  font-size: 15px;
+  font-weight: 800;
+  color: #00216E;
+  margin: 0 0 2px 0;
+}
+
+.panel-card-head p {
+  font-size: 11.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.panel-controls {
+  display: flex;
+  gap: 4px;
+  background: #F1F5F9;
+  padding: 2px;
+  border-radius: 6px;
+}
+
+.filter-chip {
+  background: transparent;
+  border: none;
+  font-size: 11px;
+  font-weight: 700;
+  color: #64748B;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.filter-chip.active {
+  background: white;
+  color: #002B7F;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.chart-legend-row {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #F1F5F9;
+  font-size: 11.5px;
+  color: #334155;
+  flex-wrap: wrap;
+}
+
+.leg-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.leg-bullet {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+}
+
+.leg-bullet.blue { background: #002B7F; }
+.leg-bullet.saffron { background: #FE6500; }
+.leg-bullet.green { background: #16A34A; }
+
+.exam-count-chip {
+  background: #EBF2FF;
+  color: #002B7F;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 12px;
+}
+
+.stream-bars-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.stream-bar-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.st-info-row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 12px;
+}
+
+.st-name {
+  font-weight: 700;
+  color: #1E293B;
+}
+
+.st-count {
+  font-weight: 600;
+  color: #64748B;
+}
+
+.st-progress-track {
+  width: 100%;
+  height: 8px;
+  background: #F1F5F9;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.st-progress-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.5s ease-out;
+}
+
+/* 4. Live Operations Section */
+.live-ops-section {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.live-header-lockup {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.live-pulse-badge {
+  background: #DC2626;
+  color: white;
+  font-size: 10px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.live-sync-text {
+  font-size: 11.5px;
+  color: #64748B;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.spin-slow {
+  animation: spin 6s linear infinite;
+}
+
+@keyframes spin {
+  100% { transform: rotate(360deg); }
+}
+
+.live-ops-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  margin-top: 14px;
+}
+
+@media (max-width: 1024px) {
+  .live-ops-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .live-ops-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.live-op-card {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 14px;
+  display: flex;
+  flex-direction: column;
+}
+
+.op-top-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.op-badge {
+  background: #002B7F;
+  color: white;
+  font-size: 9.5px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.op-time {
+  font-size: 10px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.live-op-card h4 {
+  font-size: 12.5px;
+  font-weight: 800;
+  color: #00216E;
+  margin: 0 0 6px 0;
+  line-height: 1.3;
+}
+
+.op-stat-highlight {
+  font-size: 11.5px;
+  color: #15803D;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* 5. National State Performance Matrix Table */
+.state-matrix-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px 22px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.matrix-head-flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.matrix-head-flex h3 {
+  font-size: 16px;
+  font-weight: 800;
+  color: #00216E;
+  margin: 0 0 2px 0;
+}
+
+.matrix-head-flex p {
+  font-size: 11.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.matrix-search-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  padding: 6px 12px;
+  border-radius: 6px;
+  width: 240px;
+}
+
+.matrix-search-box input {
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 12px;
+  color: #1E293B;
+  width: 100%;
+}
+
+.matrix-table-container {
+  overflow-x: auto;
+}
+
+.gov-matrix-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 12.5px;
+  text-align: left;
+}
+
+.gov-matrix-table th {
+  background: #F1F5F9;
+  color: #002B7F;
+  font-weight: 800;
+  padding: 10px 14px;
+  border-bottom: 2px solid #CBD5E1;
+  white-space: nowrap;
+}
+
+.gov-matrix-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid #E2E8F0;
+  color: #334155;
+  white-space: nowrap;
+}
+
+.gov-matrix-table tbody tr:hover {
+  background: #F8FAFC;
+}
+
+.rank-badge {
+  font-weight: 800;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.rank-1 { background: #FEF3C7; color: #B45309; }
+.rank-2 { background: #E2E8F0; color: #475569; }
+.rank-3 { background: #FFEDD5; color: #C2410C; }
+
+.state-name-cell {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.state-code-pill {
+  background: #EBF2FF;
+  color: #002B7F;
+  font-size: 10.5px;
+  font-weight: 800;
+  padding: 2px 6px;
+  border-radius: 4px;
+}
+
+.score-pill {
+  background: #DCFCE7;
+  color: #15803D;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 11.5px;
+}
+
+.exam-tag {
+  background: #F1F5F9;
+  color: #334155;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.reach-bar-box {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.reach-track {
+  width: 60px;
+  height: 6px;
+  background: #E2E8F0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.reach-fill {
+  height: 100%;
+  background: #024A00;
+  border-radius: 3px;
+}
+
+.growth-text-green {
+  color: #16A34A;
+  font-weight: 800;
+}
+
+.btn-state-drilldown {
+  background: transparent;
+  border: 1px solid #CBD5E1;
+  color: #002B7F;
+  padding: 4px 10px;
+  border-radius: 4px;
+  font-size: 11.5px;
+  font-weight: 700;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  transition: all 0.2s;
+}
+
+.btn-state-drilldown:hover {
+  background: #002B7F;
+  color: white;
+  border-color: #002B7F;
+}

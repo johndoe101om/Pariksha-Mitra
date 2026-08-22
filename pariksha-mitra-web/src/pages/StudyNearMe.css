@@ -1,0 +1,389 @@
+/* ==========================================================
+   STUDY NEAR ME (STUDENT DASHBOARD VISUAL STANDARD)
+   ========================================================== */
+
+.snm-root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1A1C1C;
+  padding-bottom: 60px;
+}
+
+.snm-hero-location-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.16);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  color: #FFFFFF;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12.5px;
+  font-weight: 700;
+}
+
+.snm-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Search Header Card */
+.snm-search-header-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.snm-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  border-radius: 14px;
+  padding: 4px 8px 4px 14px;
+}
+
+.snm-search-field {
+  flex: 1;
+  height: 40px;
+  border: none;
+  background: transparent;
+  font-size: 14px;
+  font-weight: 600;
+  color: #0F172A;
+  outline: none;
+}
+
+.snm-locate-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0033A0;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 10px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.snm-locate-btn:hover {
+  background: #00216E;
+}
+
+.snm-filter-chips {
+  display: flex;
+  gap: 8px;
+  overflow-x: auto;
+  scrollbar-width: none;
+}
+
+.snm-chip {
+  padding: 8px 16px;
+  border-radius: 20px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #475569;
+  font-size: 12.5px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  white-space: nowrap;
+}
+
+.snm-chip:hover {
+  border-color: #0033A0;
+  color: #0033A0;
+}
+
+.snm-chip.active {
+  background: #FE6500;
+  color: #FFFFFF;
+  border-color: #FE6500;
+}
+
+/* Dual Grid */
+.snm-dual-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+
+@media (max-width: 992px) {
+  .snm-dual-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Map Card */
+.snm-map-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.map-visual-canvas {
+  height: 340px;
+  background: #E2E8F0;
+  background-image: linear-gradient(#CBD5E1 1px, transparent 1px), linear-gradient(90deg, #CBD5E1 1px, transparent 1px);
+  background-size: 32px 32px;
+  position: relative;
+  overflow: hidden;
+}
+
+.map-pin {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: #0033A0;
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0, 51, 160, 0.4);
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.map-pin:hover {
+  transform: scale(1.15);
+}
+
+.map-pin.pin-1 { top: 32%; left: 38%; }
+.map-pin.pin-2 { top: 62%; left: 68%; background: #16A34A; }
+.map-pin.pin-user { top: 48%; left: 50%; background: #FE6500; }
+
+.pin-tooltip {
+  position: absolute;
+  bottom: 110%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #0F172A;
+  color: #FFFFFF;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 3px 8px;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.map-controls-overlay {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+}
+
+.map-source-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  background: rgba(255, 255, 255, 0.9);
+  color: #0F172A;
+  font-size: 11px;
+  font-weight: 700;
+  padding: 4px 8px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Meetups Box */
+.snm-meetups-box {
+  padding: 20px;
+  background: #F8FAFC;
+  border-top: 1px solid #E2E8F0;
+}
+
+.meetups-head {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: #0F172A;
+}
+
+.meetup-cards-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meetup-mini-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 10px 14px;
+}
+
+.meetup-topic {
+  font-size: 13px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 2px 0;
+}
+
+.meetup-time {
+  font-size: 11.5px;
+  color: #64748B;
+}
+
+.meetup-join-btn {
+  background: rgba(0, 51, 160, 0.08);
+  color: #0033A0;
+  border: 1px solid rgba(0, 51, 160, 0.2);
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+/* Right Places List */
+.snm-places-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.snm-place-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  transition: all 0.2s ease;
+}
+
+.snm-place-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.place-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+
+.place-type-lockup {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.place-type-pill {
+  font-size: 11px;
+  font-weight: 700;
+  background: rgba(0, 51, 160, 0.1);
+  color: #0033A0;
+  padding: 3px 8px;
+  border-radius: 6px;
+}
+
+.place-dist {
+  font-size: 11.5px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.place-seats-free {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  font-weight: 700;
+  color: #15803D;
+  background: #DCFCE7;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.place-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 6px 0;
+}
+
+.place-address {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12.5px;
+  color: #64748B;
+  margin: 0 0 12px 0;
+}
+
+.place-amenities-row {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-bottom: 16px;
+}
+
+.amenity-chip {
+  font-size: 11px;
+  background: #F1F5F9;
+  color: #334155;
+  padding: 2px 8px;
+  border-radius: 6px;
+  font-weight: 500;
+}
+
+.place-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.place-timing {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #475569;
+}
+
+.place-nav-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0033A0;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.place-nav-btn:hover {
+  background: #00216E;
+}

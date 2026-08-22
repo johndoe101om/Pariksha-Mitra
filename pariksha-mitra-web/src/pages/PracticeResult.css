@@ -1,0 +1,220 @@
+.practice-result-container {
+  padding: var(--spacing-xl);
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.pr-header {
+  text-align: center;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.pr-header h1 {
+  font-size: var(--font-size-headline-lg);
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-sm);
+}
+
+.pr-header .hi {
+  font-size: var(--font-size-title-lg);
+  color: var(--color-outline);
+  font-weight: 400;
+}
+
+.pr-top-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+}
+
+@media (min-width: 768px) {
+  .pr-top-cards {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+.score-card {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-2xl);
+  text-align: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-outline-variant);
+}
+
+.score-circle {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto var(--spacing-lg) auto;
+}
+
+.inner-circle {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.score-num {
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--color-primary);
+  line-height: 1;
+}
+
+.score-div {
+  font-size: 18px;
+  color: var(--color-outline);
+}
+
+.score-svg {
+  width: 100%;
+  height: 100%;
+  transform: rotate(-90deg);
+}
+
+.score-bg {
+  fill: none;
+  stroke: #eee;
+  stroke-width: 3.8;
+}
+
+.score-path {
+  fill: none;
+  stroke: var(--color-tertiary);
+  stroke-width: 3.8;
+  stroke-linecap: round;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--spacing-lg);
+}
+
+.stat-box {
+  background: white;
+  border-radius: var(--radius-xl);
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  border: 1px solid var(--color-outline-variant);
+}
+
+.stat-val {
+  font-size: var(--font-size-headline-md);
+  font-weight: 700;
+  margin: var(--spacing-sm) 0 4px 0;
+}
+
+.stat-label {
+  color: var(--color-outline);
+  font-size: var(--font-size-body-sm);
+}
+
+.pr-actions {
+  display: flex;
+  justify-content: center;
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-3xl);
+}
+
+.pr-section {
+  margin-bottom: var(--spacing-3xl);
+}
+
+.pr-section h2 {
+  font-size: var(--font-size-title-lg);
+  margin-bottom: var(--spacing-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.breakdown-table {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-outline-variant);
+  overflow: hidden;
+}
+
+.table-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  padding: var(--spacing-md) var(--spacing-lg);
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+.table-row:last-child {
+  border-bottom: none;
+}
+.table-row.th {
+  background: #F4F6F8;
+  font-weight: 600;
+  color: var(--color-outline);
+}
+.weak-area {
+  background: #FFEBEE;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-md);
+}
+
+.review-item {
+  background: white;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-outline-variant);
+  padding: var(--spacing-lg);
+  cursor: pointer;
+}
+
+.review-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: var(--spacing-sm);
+}
+
+.q-status {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-weight: 600;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+.q-status.correct {
+  background: #E8F5E9;
+  color: #2E7D32;
+}
+.q-status.wrong {
+  background: #FFEBEE;
+  color: #C62828;
+}
+
+.q-time {
+  margin-left: var(--spacing-md);
+  color: var(--color-outline);
+  font-size: var(--font-size-caption);
+}
+
+.expand-icon {
+  margin-left: auto;
+  color: var(--color-outline);
+}
+
+.review-q-text {
+  font-size: var(--font-size-body-md);
+  color: var(--color-on-surface);
+}

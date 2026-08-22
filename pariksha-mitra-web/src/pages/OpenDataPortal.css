@@ -1,0 +1,276 @@
+.opendata-container {
+  padding: var(--spacing-3);
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+.opendata-header {
+  margin-bottom: var(--spacing-4);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  padding: var(--spacing-4);
+  border-radius: var(--radius-xl);
+}
+
+.opendata-header h2 {
+  margin: 0 0 var(--spacing-1);
+}
+
+.opendata-header .hi {
+  color: rgba(255,255,255,0.8);
+}
+
+.sync-status {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  margin-top: var(--spacing-2);
+  font-size: 0.9rem;
+  background: rgba(255,255,255,0.1);
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-full);
+  display: inline-flex;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.stat-card {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.stat-icon {
+  color: var(--color-secondary);
+  width: 32px;
+  height: 32px;
+}
+
+.stat-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.stat-label {
+  font-size: 0.85rem;
+  color: var(--color-outline);
+}
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.datasets-section h3, .api-section h3 {
+  color: var(--color-primary);
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+}
+
+.dataset-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.dataset-row {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dataset-info h4 {
+  margin: 0 0 var(--spacing-1);
+}
+
+.dataset-info p {
+  margin: 0 0 var(--spacing-1);
+  color: var(--color-outline);
+  font-size: 0.9rem;
+}
+
+.dataset-meta {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  font-size: 0.8rem;
+  color: var(--color-outline-variant);
+}
+
+.dataset-action {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: var(--spacing-2);
+}
+
+.format-badge {
+  background: var(--color-background);
+  padding: 2px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: bold;
+  border: 1px solid var(--color-outline-variant);
+}
+
+.btn-download {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  background: var(--color-primary);
+  color: var(--color-surface);
+  border: none;
+  padding: var(--spacing-1) var(--spacing-2);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  min-height: 40px;
+}
+
+.api-card {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+  margin-bottom: var(--spacing-4);
+}
+
+.api-usage {
+  background: var(--color-background);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-3);
+  font-size: 0.9rem;
+}
+
+.api-usage p {
+  margin: var(--spacing-1) 0;
+}
+
+.endpoint {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  background: var(--color-background);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  margin-bottom: var(--spacing-2);
+}
+
+.method.get {
+  background: var(--color-tertiary);
+  color: var(--color-surface);
+  padding: 2px 6px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: bold;
+}
+
+.endpoint code {
+  font-family: monospace;
+  font-size: 0.9rem;
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  width: 100%;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--color-primary);
+  color: var(--color-primary);
+  padding: var(--spacing-2);
+  border-radius: var(--radius-md);
+  margin-top: var(--spacing-2);
+  cursor: pointer;
+}
+
+.reports-section {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+}
+
+.report-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.report-list li {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2) 0;
+  border-bottom: 1px solid var(--color-outline-variant);
+  color: var(--color-primary);
+  cursor: pointer;
+}
+
+.report-list li:last-child {
+  border-bottom: none;
+}
+
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .dataset-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-3);
+  }
+  .dataset-action {
+    align-items: flex-start;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+}
+
+.link-button {
+  background: none;
+  border: none;
+  color: inherit;
+  font: inherit;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-decoration: underline;
+}
+
+/* GIGW 3.0 Focus & Touch Target Styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+button, a, input, select, .link-button {
+  min-height: 48px;
+  min-width: 48px;
+}

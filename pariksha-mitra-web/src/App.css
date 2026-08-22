@@ -1,0 +1,14 @@
+.page-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh;
+  padding: 24px;
+}
+
+.page-placeholder h1 {
+  color: var(--color-on-surface, #1A1C1C);
+  font-family: var(--font-family, 'Noto Sans', sans-serif);
+  font-size: 32px;
+  font-weight: 700;
+}

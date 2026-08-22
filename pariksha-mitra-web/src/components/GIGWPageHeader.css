@@ -1,0 +1,235 @@
+/* ==========================================================
+   GIGW 3.0 SOVEREIGN HERO BANNER (MATCHES STUDENT DASHBOARD)
+   ========================================================== */
+
+.gigw-hero-banner {
+  background: linear-gradient(135deg, #00216E 0%, #0033A0 60%, #0B4A9E 100%);
+  color: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 8px 24px rgba(0, 33, 110, 0.15);
+  position: relative;
+  overflow: hidden;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.gigw-hero-banner::after {
+  content: '';
+  position: absolute;
+  right: -40px;
+  top: -40px;
+  width: 240px;
+  height: 240px;
+  border-radius: 50%;
+  background: rgba(254, 101, 0, 0.16);
+  pointer-events: none;
+}
+
+/* Top Badges & Single-Line Breadcrumb Strip */
+.gigw-hero-top-strip {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.14);
+  position: relative;
+  z-index: 2;
+  flex-wrap: nowrap;
+}
+
+@media (max-width: 900px) {
+  .gigw-hero-top-strip {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+}
+
+/* Guaranteed Single-Line Inline Breadcrumbs */
+.gigw-hero-banner nav.gigw-hero-breadcrumbs {
+  display: inline-flex !important;
+  flex-direction: row !important;
+  align-items: center !important;
+  gap: 8px !important;
+  flex-shrink: 0 !important;
+  white-space: nowrap !important;
+  flex-wrap: nowrap !important;
+  line-height: 1 !important;
+}
+
+.gigw-hero-banner .crumb-sep {
+  color: rgba(255, 255, 255, 0.45) !important;
+  flex-shrink: 0 !important;
+  display: inline-flex !important;
+  align-items: center !important;
+}
+
+.gigw-hero-banner a.crumb-link {
+  color: rgba(255, 255, 255, 0.82) !important;
+  text-decoration: none !important;
+  font-weight: 500 !important;
+  font-size: 13px !important;
+  transition: color 0.15s ease;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+.gigw-hero-banner a.crumb-link:hover,
+.gigw-hero-banner a.crumb-link:focus-visible {
+  color: #FFD54F !important;
+  text-decoration: underline !important;
+}
+
+.gigw-hero-banner span.crumb-current {
+  color: #FFFFFF !important;
+  font-weight: 700 !important;
+  font-size: 13px !important;
+  background: none !important;
+  padding: 0 !important;
+  border: none !important;
+  box-shadow: none !important;
+  white-space: nowrap !important;
+  display: inline-flex !important;
+  align-items: center !important;
+  line-height: 1 !important;
+}
+
+/* Badges on Right */
+.gigw-hero-badges-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+
+.hero-seal-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+  color: #FFFFFF;
+  white-space: nowrap;
+}
+
+.hero-gov-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: #FE6500;
+  color: #FFFFFF;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  box-shadow: 0 2px 6px rgba(254, 101, 0, 0.3);
+  white-space: nowrap;
+}
+
+.hero-cloud-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(2, 74, 0, 0.35);
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  color: #86EFAC;
+  padding: 3px 10px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Main Content Lockup */
+.gigw-hero-main-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+
+@media (max-width: 900px) {
+  .gigw-hero-main-inner {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+.gigw-hero-left {
+  flex: 1;
+}
+
+.gigw-hero-title-group {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.gigw-hero-icon-orb {
+  width: 52px;
+  height: 52px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(254, 101, 0, 0.9) 0%, rgba(224, 83, 0, 0.9) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #FFFFFF;
+  flex-shrink: 0;
+  box-shadow: 0 4px 14px rgba(254, 101, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.gigw-hero-texts {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.gigw-hero-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin: 0;
+  line-height: 1.25;
+}
+
+.gigw-title-hi {
+  color: #FFD54F;
+  font-size: 20px;
+  font-weight: 600;
+  margin-left: 8px;
+}
+
+.gigw-hero-subtitle {
+  font-size: 13px;
+  color: rgba(255, 255, 255, 0.9);
+  margin: 0;
+  line-height: 1.4;
+}
+
+.gigw-hero-subtitle .sub-hi {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.gigw-hero-right-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}

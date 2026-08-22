@@ -1,0 +1,227 @@
+.constituency-container {
+  padding: var(--spacing-3);
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: system-ui, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-on-surface);
+}
+
+.constituency-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-4);
+  flex-wrap: wrap;
+  gap: var(--spacing-2);
+}
+
+.header-titles h2 {
+  color: var(--color-primary);
+  margin: 0 0 var(--spacing-1);
+}
+
+.hi {
+  font-size: 0.85em;
+  color: var(--color-outline);
+  margin-left: var(--spacing-1);
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background: var(--color-surface);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+  padding: var(--spacing-1) var(--spacing-2);
+  width: 300px;
+}
+
+.search-bar input {
+  border: none;
+  outline: none;
+  width: 100%;
+  margin-left: var(--spacing-1);
+}
+
+.constituency-overview {
+  margin-bottom: var(--spacing-4);
+}
+
+.overview-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+}
+
+.mp-details h3 {
+  margin: 0 0 var(--spacing-1);
+  color: var(--color-primary);
+}
+
+.mp-name {
+  font-weight: bold;
+  margin: 0 0 var(--spacing-1);
+}
+
+.mp-location {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  color: var(--color-outline);
+  margin: 0;
+}
+
+.mp-ranking {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  text-align: right;
+}
+
+.ranking-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.rank-value {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: var(--color-secondary);
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-3);
+  margin-bottom: var(--spacing-4);
+}
+
+.metric-card {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  box-shadow: var(--elevation-1);
+}
+
+.metric-icon {
+  color: var(--color-primary);
+  background: var(--color-background);
+  padding: var(--spacing-1);
+  border-radius: var(--radius-full);
+}
+
+.metric-info h4 {
+  margin: 0 0 var(--spacing-1);
+  font-size: 0.9rem;
+  color: var(--color-outline);
+}
+
+.metric-value {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-on-surface);
+}
+
+.dashboard-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-4);
+  margin-bottom: var(--spacing-4);
+}
+
+.chart-section, .tables-section {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+}
+
+.chart-section h3, .tables-section h3, .report-actions h3 {
+  margin-top: 0;
+  margin-bottom: var(--spacing-3);
+  color: var(--color-primary);
+}
+
+.blocks-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.blocks-table th, .blocks-table td {
+  text-align: left;
+  padding: var(--spacing-2) var(--spacing-1);
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.report-actions {
+  background: var(--color-surface);
+  padding: var(--spacing-3);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--elevation-1);
+}
+
+.action-buttons {
+  display: flex;
+  gap: var(--spacing-3);
+  flex-wrap: wrap;
+}
+
+button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-2) var(--spacing-3);
+  border: none;
+  border-radius: var(--radius-default);
+  cursor: pointer;
+  font-weight: bold;
+  min-height: 48px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.btn-secondary {
+  background-color: var(--color-background);
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+}
+
+@media (max-width: 1024px) {
+  .dashboard-content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .overview-card {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+  }
+  .mp-ranking {
+    align-self: flex-start;
+    text-align: left;
+  }
+}
+
+/* GIGW 3.0 Focus & Touch Target Styles */
+:focus-visible {
+  outline: 2px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
+input, button, a {
+  min-height: 48px;
+  min-width: 48px;
+}

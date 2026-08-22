@@ -1,0 +1,459 @@
+/* ==========================================================
+   NATIONAL SCHOLARSHIPS & DBT PORTAL (PREMIUM STUDENT UI)
+   ========================================================== */
+
+.scholarship-root {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  color: #1A1C1C;
+  padding-bottom: 60px;
+}
+
+.scholarship-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: rgba(2, 74, 0, 0.35);
+  border: 1px solid rgba(134, 239, 172, 0.3);
+  color: #86EFAC;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+.scholarship-workspace {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+/* Nav Tabs */
+.scholarship-nav-tabs {
+  display: flex;
+  gap: 10px;
+  background: #F1F5F9;
+  padding: 6px;
+  border-radius: 14px;
+  overflow-x: auto;
+}
+
+.s-nav-tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: none;
+  background: transparent;
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #64748B;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.s-nav-tab:hover {
+  color: #0033A0;
+}
+
+.s-nav-tab.active {
+  background: #0033A0;
+  color: #FFFFFF;
+  box-shadow: 0 2px 8px rgba(0, 51, 160, 0.3);
+}
+
+/* Filter Bar */
+.s-filter-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.s-search-input-wrap {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: #FFFFFF;
+  border: 1px solid #CBD5E1;
+  border-radius: 12px;
+  padding: 0 14px;
+  height: 44px;
+  flex: 1;
+  max-width: 460px;
+}
+
+.s-search-field {
+  border: none;
+  background: transparent;
+  width: 100%;
+  font-size: 13px;
+  outline: none;
+  color: #0F172A;
+}
+
+.s-category-pills {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.s-cat-btn {
+  padding: 6px 14px;
+  border-radius: 20px;
+  border: 1px solid #CBD5E1;
+  background: #FFFFFF;
+  color: #475569;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.s-cat-btn:hover {
+  border-color: #0033A0;
+  color: #0033A0;
+}
+
+.s-cat-btn.active {
+  background: #FE6500;
+  color: #FFFFFF;
+  border-color: #FE6500;
+}
+
+/* Scholarship Cards Grid */
+.scholarship-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 20px;
+}
+
+.sch-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 24px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.sch-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.09);
+  border-color: #CBD5E1;
+}
+
+.sch-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #FE6500 0%, #16A34A 100%);
+}
+
+.sch-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+.sch-amount-pill {
+  font-size: 14px;
+  font-weight: 800;
+  color: #15803D;
+  background: #DCFCE7;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.sch-deadline-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #64748B;
+  font-weight: 600;
+}
+
+.sch-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 6px 0;
+  line-height: 1.35;
+}
+
+.sch-provider {
+  font-size: 12px;
+  color: #64748B;
+  margin: 0 0 12px 0;
+}
+
+.sch-eligibility-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 12px;
+  color: #334155;
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.sch-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: auto;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 12px;
+}
+
+.sch-count-tag {
+  font-size: 11.5px;
+  font-weight: 700;
+  color: #0033A0;
+}
+
+.sch-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #0033A0;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 18px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.sch-apply-btn:hover {
+  background: #00216E;
+}
+
+/* DBT Tracker */
+.dbt-tracker-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 26px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+}
+
+.dbt-tracker-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #F1F5F9;
+  padding-bottom: 16px;
+}
+
+.dbt-title {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0 0 4px 0;
+}
+
+.dbt-app-id {
+  font-size: 12.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+.dbt-status-live {
+  font-size: 12px;
+  font-weight: 800;
+  color: #D97706;
+  background: #FEF3C7;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.dbt-timeline-steps {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+  text-align: center;
+}
+
+@media (max-width: 768px) {
+  .dbt-timeline-steps {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.dbt-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.step-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: #F1F5F9;
+  border: 2px solid #CBD5E1;
+  color: #64748B;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.dbt-step.completed .step-circle {
+  background: #16A34A;
+  border-color: #16A34A;
+  color: #FFFFFF;
+}
+
+.dbt-step.active .step-circle {
+  background: #0033A0;
+  border-color: #0033A0;
+  color: #FFFFFF;
+}
+
+.step-name {
+  font-size: 13px;
+  color: #0F172A;
+}
+
+.step-date {
+  font-size: 11px;
+  color: #64748B;
+}
+
+/* Rewards Grid */
+.rewards-badges-grid, .internship-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.reward-badge-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 26px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
+
+.badge-name {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.badge-desc {
+  font-size: 12.5px;
+  color: #64748B;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.badge-download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #0033A0;
+  padding: 8px 14px;
+  border-radius: 14px;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 6px;
+}
+
+/* Internships */
+.intern-card {
+  background: #FFFFFF;
+  border-radius: 18px;
+  padding: 22px;
+  border: 1px solid #E2E8F0;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.intern-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.intern-stipend {
+  font-size: 14px;
+  font-weight: 800;
+  color: #15803D;
+  background: #DCFCE7;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.intern-duration {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #64748B;
+}
+
+.intern-role {
+  font-size: 16px;
+  font-weight: 800;
+  color: #0F172A;
+  margin: 0;
+}
+
+.intern-dept, .intern-loc {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+  color: #475569;
+  margin: 0;
+}
+
+.intern-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: #0033A0;
+  color: #FFFFFF;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 12px;
+  font-size: 12.5px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}

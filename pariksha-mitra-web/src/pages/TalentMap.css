@@ -1,0 +1,289 @@
+.talentmap-container {
+  padding: var(--spacing-4);
+  background-color: var(--color-background);
+  min-height: 100vh;
+  font-family: system-ui, -apple-system, sans-serif;
+  color: var(--color-on-surface);
+}
+
+.talentmap-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: var(--spacing-4);
+}
+
+.talentmap-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-primary-text);
+  margin: 0 0 var(--spacing-1) 0;
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.talentmap-subtitle {
+  font-size: 14px;
+  color: var(--color-outline);
+  margin: 0;
+}
+
+.hi {
+  font-size: 0.85em;
+  font-weight: 400;
+  color: var(--color-outline);
+  font-family: "Noto Sans Devanagari", sans-serif;
+}
+
+.talentmap-actions {
+  display: flex;
+  gap: var(--spacing-3);
+  align-items: center;
+}
+
+.talentmap-filter-group {
+  display: flex;
+  gap: var(--spacing-2);
+}
+
+.talentmap-btn-outline {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: var(--spacing-1) var(--spacing-2);
+  border: 1px solid var(--color-outline-variant);
+  border-radius: var(--radius-md);
+  background: var(--color-surface);
+  color: var(--color-on-surface);
+  font-size: 14px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.talentmap-btn-primary {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-1);
+  padding: 0 var(--spacing-3);
+  background: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  height: 40px;
+  transition: background 0.2s;
+}
+
+.talentmap-btn-primary:hover {
+  background: #002277;
+}
+
+.talentmap-tabs {
+  display: flex;
+  gap: var(--spacing-4);
+  border-bottom: 1px solid var(--color-outline-variant);
+  margin-bottom: var(--spacing-4);
+}
+
+.talentmap-tab {
+  padding: var(--spacing-2) 0;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  color: var(--color-outline);
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 4px;
+}
+
+.talentmap-tab.active {
+  color: var(--color-primary);
+  border-bottom-color: var(--color-primary);
+}
+
+.talentmap-tab .hi {
+  font-size: 12px;
+}
+
+.talentmap-content {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: var(--spacing-4);
+}
+
+.talentmap-card {
+  background: var(--color-surface);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-4);
+  box-shadow: var(--elevation-2);
+  margin-bottom: var(--spacing-4);
+}
+
+.talentmap-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-3);
+}
+
+.talentmap-card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 var(--spacing-3) 0;
+  color: var(--color-on-surface);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+}
+
+.talentmap-legend {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  font-size: 12px;
+  color: var(--color-outline);
+}
+
+.talentmap-gradient-bar {
+  width: 100px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  background: linear-gradient(to right, #e0f2fe, var(--color-primary));
+}
+
+.talentmap-map-placeholder {
+  height: 400px;
+  background: #f1f5f9;
+  border-radius: var(--radius-md);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-outline);
+  border: 1px dashed var(--color-outline-variant);
+}
+
+.talentmap-mock-states {
+  display: flex;
+  gap: var(--spacing-2);
+  margin-top: var(--spacing-3);
+}
+
+.talentmap-mock-states span {
+  padding: var(--spacing-1) var(--spacing-2);
+  background: white;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid var(--color-outline-variant);
+}
+
+.talentmap-mock-states span.active {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.talentmap-state-metrics {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3);
+}
+
+.talentmap-metric-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  padding: var(--spacing-2);
+  background: var(--color-background);
+  border-radius: var(--radius-md);
+}
+
+.talentmap-metric-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(0, 51, 160, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.talentmap-metric-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.talentmap-metric-label {
+  font-size: 12px;
+  color: var(--color-outline);
+}
+
+.talentmap-metric-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-on-surface);
+}
+
+.talentmap-toppers-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.talentmap-topper-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+  padding-bottom: var(--spacing-3);
+  border-bottom: 1px solid var(--color-outline-variant);
+}
+
+.talentmap-topper-item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.talentmap-topper-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: var(--color-secondary);
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.talentmap-topper-details h4 {
+  margin: 0;
+  font-size: 14px;
+  color: var(--color-on-surface);
+}
+
+.talentmap-topper-details p {
+  margin: 4px 0 0 0;
+  font-size: 12px;
+  color: var(--color-outline);
+}
+
+.talentmap-topper-score {
+  margin-left: auto;
+  font-weight: 700;
+  color: var(--color-tertiary);
+  font-size: 14px;
+}
+
+@media (max-width: 1024px) {
+  .talentmap-content {
+    grid-template-columns: 1fr;
+  }
+}
