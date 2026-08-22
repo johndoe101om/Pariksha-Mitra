@@ -1,0 +1,10 @@
+{
+  "name": "pariksha-mitra-root",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm --prefix pariksha-mitra-web run dev",
+    "build": "npm --prefix pariksha-mitra-web run build",
+    "install": "npm --prefix pariksha-mitra-web install"
+  }
+}
