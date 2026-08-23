@@ -1,109 +1,379 @@
-.reports-page {
-  padding: 24px;
-  background-color: var(--color-background, #F9F9F9);
-  min-height: 100vh;
+﻿/* ==========================================================
+   PARLIAMENTARY REPORTS & RTI DIGEST - GIGW 3.0 STYLES
+   ========================================================== */
+
+.reports-mgmt-page {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: #F8FAFC;
+  min-height: 100%;
 }
 
-.reports-header {
-  margin-bottom: 24px;
+.rep-top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px 24px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  flex-wrap: wrap;
+  gap: 16px;
 }
 
-.reports-header h1 {
-  font-size: 28px;
-  margin: 0 0 8px 0;
+.parliament-tag {
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  color: #002B7F;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
 }
 
-.reports-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 24px;
+.rti-tag {
+  background: #DCFCE7;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+  font-size: 11px;
+  font-weight: 800;
+  padding: 2px 8px;
+  border-radius: 4px;
 }
 
-.generator-card, .preview-card {
-  background: white;
-  border-radius: var(--radius-lg);
-  padding: 24px;
-  border: 1px solid #E0E0E0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-}
-
-.generator-card h2, .preview-header h2 {
-  margin: 0 0 20px 0;
+.rep-title-lockup h1 {
   font-size: 20px;
+  font-weight: 900;
+  color: #00216E;
+  margin: 0;
 }
 
-.report-form {
+.rep-title-lockup p {
+  font-size: 12px;
+  color: #64748B;
+  margin: 3px 0 0 0;
+}
+
+.rep-header-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-print-doc {
+  background: #F1F5F9;
+  border: 1px solid #CBD5E1;
+  color: #002B7F;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.btn-download-pdf {
+  background: #002B7F;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.rep-toast-banner {
+  background: #DCFCE7;
+  border: 1px solid #BBF7D0;
+  color: #15803D;
+  padding: 10px 18px;
+  border-radius: 8px;
+  font-size: 12.5px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 4-Column KPI Grid */
+.rep-kpi-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 1100px) {
+  .rep-kpi-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .rep-kpi-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.rep-kpi-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 16px 18px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.rep-kpi-card.border-blue { border-top: 3.5px solid #002B7F; }
+.rep-kpi-card.border-green { border-top: 3.5px solid #15803D; }
+.rep-kpi-card.border-saffron { border-top: 3.5px solid #C2410C; }
+.rep-kpi-card.border-purple { border-top: 3.5px solid #7E22CE; }
+
+.rep-kpi-card h3 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #00216E;
+  margin: 2px 0 0 0;
+}
+
+.rep-kpi-card p {
+  font-size: 10.5px;
+  color: #94A3B8;
+  margin: 2px 0 0 0;
+}
+
+/* Main Workspace Grid */
+.rep-workspace-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  gap: 20px;
+}
+
+@media (max-width: 1024px) {
+  .rep-workspace-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.generator-form-card {
+  background: #FFFFFF;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.metrics-grid {
+.rep-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.form-item {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.form-item label {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.form-item input, .form-item select {
+  padding: 8px 12px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 12.5px;
+  outline: none;
+}
+
+.form-grid-2 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 12px;
-  background: #F9F9F9;
-  padding: 16px;
-  border-radius: var(--radius-md);
-  border: 1px solid #E0E0E0;
 }
 
-.metrics-grid label {
+.metrics-checklist-box {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 12px 14px;
+}
+
+.section-sub-label {
+  display: block;
+  font-size: 11px;
+  font-weight: 800;
+  color: #002B7F;
+  margin-bottom: 8px;
+}
+
+.chk-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chk-label {
   display: flex;
   align-items: center;
   gap: 8px;
-  font-weight: normal;
-  font-size: 14px;
+  font-size: 11.5px;
+  color: #475569;
+  font-weight: 600;
+  cursor: pointer;
 }
 
-.preview-header {
+.btn-generate-digest {
+  background: #002B7F;
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 12.5px;
+  font-weight: 800;
+  cursor: pointer;
+  margin-top: 4px;
+}
+
+/* Official Document Preview (Letterhead Look) */
+.official-document-preview-card {
+  background: #525659; /* Document viewer dark backdrop */
+  padding: 24px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+}
+
+.doc-paper {
+  background: #FFFFFF;
+  width: 100%;
+  max-width: 680px;
+  min-height: 720px;
+  padding: 40px 48px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  font-family: 'Times New Roman', Times, serif;
+  color: #111827;
+}
+
+.doc-letterhead {
+  text-align: center;
+  border-bottom: 2px solid #000;
+  padding-bottom: 12px;
+}
+
+.gov-emblem-text {
+  font-size: 28px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.emblem-center h4 {
+  font-size: 14px;
+  font-weight: 900;
+  margin: 0;
+  letter-spacing: 0.5px;
+}
+
+.emblem-center h5 {
+  font-size: 12px;
+  font-weight: 700;
+  margin: 2px 0 0 0;
+}
+
+.emblem-center h6 {
+  font-size: 10.5px;
+  font-weight: 600;
+  margin: 2px 0 0 0;
+  color: #4B5563;
+}
+
+.doc-meta-bar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  font-size: 10.5px;
+  font-weight: bold;
+  margin-top: 12px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.btn-icon {
-  background: none;
-  border: 1px solid #C4C5D5;
-  padding: 8px;
-  border-radius: 4px;
-  cursor: pointer;
-  margin-left: 8px;
+.doc-subject-box {
+  font-size: 11.5px;
+  line-height: 1.4;
+  text-align: justify;
+  background: #F9FAFB;
+  border: 1px solid #E5E7EB;
+  padding: 8px 12px;
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.document-mock {
-  border: 1px solid #E0E0E0;
-  padding: 40px;
-  margin-top: 20px;
-  min-height: 500px;
-  font-family: 'Times New Roman', serif;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+.doc-body-text {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  font-size: 11.5px;
+  line-height: 1.5;
 }
 
-.doc-header {
-  text-align: center;
-  border-bottom: 2px solid black;
-  padding-bottom: 20px;
-  margin-bottom: 20px;
+.doc-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 10.5px;
+  font-family: 'Noto Sans', sans-serif;
+  margin: 8px 0;
 }
 
-.doc-header h3, .doc-header h4 {
-  margin: 4px 0;
+.doc-table th, .doc-table td {
+  border: 1px solid #9CA3AF;
+  padding: 6px 8px;
+  text-align: left;
 }
 
-.doc-body p {
-  line-height: 1.6;
-  margin-bottom: 16px;
+.doc-table th {
+  background: #F3F4F6;
+  font-weight: bold;
 }
 
-.doc-body ul {
-  line-height: 1.6;
-  margin-bottom: 20px;
+.doc-certification-notes p {
+  margin: 0 0 6px 0;
+  font-size: 11px;
 }
 
-.footer-note {
-  font-style: italic;
-  font-size: 12px;
-  color: #666;
-  margin-top: 40px;
+.doc-signature-block {
+  margin-top: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  text-align: right;
+  font-family: 'Noto Sans', sans-serif;
+}
+
+.doc-signature-block strong {
+  font-size: 11.5px;
+}
+
+.doc-signature-block span {
+  font-size: 10px;
+  color: #4B5563;
 }

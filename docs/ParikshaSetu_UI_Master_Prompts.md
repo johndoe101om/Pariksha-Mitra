@@ -1,4 +1,4 @@
-# PARIKSHA MITRA — Full UI Development Master Prompt Document
+# ParikshaSetu — Full UI Development Master Prompt Document
 **National Free Competitive Exam Coaching Platform**
 **Ministry of Education, Government of India**
 Version 2.0 | August 2026 | Confidential
@@ -10,7 +10,7 @@ Version 2.0 | August 2026 | Confidential
 > Copy this block as the **system prompt / preamble** for every screen you generate with any AI code tool, design tool, or LLM.
 
 ```
-You are building a screen for "Pariksha Mitra" — the National Free Competitive Exam
+You are building a screen for "ParikshaSetu" — the National Free Competitive Exam
 Coaching Platform under the Ministry of Education, Government of India.
 
 MANDATORY RULES FOR EVERY SCREEN:
@@ -90,11 +90,11 @@ DESIGN APPROACH
 ```
 [INJECT GLOBAL MASTER PROMPT]
 
-Design and build the Splash Screen for Pariksha Mitra.
+Design and build the Splash Screen for ParikshaSetu.
 
 VISUAL REQUIREMENTS:
 - Full-screen white background
-- Centred Pariksha Mitra logo (SVG, <20KB) with Ashoka Chakra motif
+- Centred ParikshaSetu logo (SVG, <20KB) with Ashoka Chakra motif
 - Tagline below logo: "Every Student's Personal AI Coaching Partner"
   (Hindi: "हर छात्र का व्यक्तिगत AI कोचिंग साथी")
 - "Ministry of Education, Government of India" in smaller text below
@@ -129,7 +129,7 @@ LAYOUT (mobile-first, 360dp):
   < 40KB)
 - Heading (H1): "Free Quality Coaching for Every Aspirant"
   Hindi: "हर उम्मीदवार के लिए मुफ़्त गुणवत्तापूर्ण कोचिंग"
-- Body (2 lines max): "Pariksha Mitra is 100% free, government-backed coaching
+- Body (2 lines max): "ParikshaSetu is 100% free, government-backed coaching
   for SSC, Banking, Railway, UPSC, NEET, JEE, and State PSC exams."
 - Progress dots: 4 dots, dot 1 filled (current)
 - CTA button (full-width, primary): "Next →"
@@ -231,14 +231,14 @@ ACCESSIBILITY: Each card must have proper ARIA label with English + native name.
 Build the Authentication screen using Aadhaar OTP login.
 
 STATE 1 — Enter Aadhaar Number:
-- Header: Pariksha Mitra logo + "Secure Login / सुरक्षित लॉगिन"
+- Header: ParikshaSetu logo + "Secure Login / सुरक्षित लॉगिन"
 - Input field: "Aadhaar Number" — 12 digit numeric keypad, masked after entry
   (show last 4 digits only: XXXX XXXX 1234)
 - Privacy notice (collapsible): "Your Aadhaar number is used only for identity
   verification per Aadhaar Act 2016. It is never stored on our servers."
 - UIDAI consent checkbox (mandatory): "I consent to OTP-based verification"
 - CTA: "Get OTP / OTP प्राप्त करें" (disabled until valid 12-digit input)
-- Bottom link: "New to Pariksha Mitra? Know More"
+- Bottom link: "New to ParikshaSetu? Know More"
 
 STATE 2 — OTP Verification:
 - Show masked Aadhaar: "OTP sent to mobile linked with XXXX XXXX 1234"
@@ -379,7 +379,7 @@ IMPORTANT: Never show "You failed" or negative language. Always frame as
 Build the main Student Dashboard / Home screen.
 
 TOP BAR:
-- Pariksha Mitra logo (small, top-left)
+- ParikshaSetu logo (small, top-left)
 - Greeting: "Good Morning, Rahul! / सुप्रभात, राहुल!" (time-based)
 - Notification bell icon (top-right) with badge for unread count
 - Offline indicator banner (amber, shown when offline): "You're offline — showing
@@ -849,7 +849,7 @@ ARCHITECTURE NOTE:
 
 CHAT AREA (WhatsApp-style bubbles):
 - User messages (right, blue bubble)
-- AI responses (left, white bubble with Pariksha Mitra bot avatar)
+- AI responses (left, white bubble with ParikshaSetu bot avatar)
 - Support markdown rendering in responses (bold, lists, formulae)
 - Code/formula blocks with proper math rendering (KaTeX)
 
@@ -1133,7 +1133,7 @@ SETTINGS SECTIONS (accordion groups):
 - "Report a Problem →"
 - "Privacy Policy →"
 - "Terms of Use →"
-- "About Pariksha Mitra"
+- "About ParikshaSetu"
 - App version: "v2.1.4 | NIC MeghRaj | CERT-In Certified"
 
 LOG OUT button (prominent, at bottom, destructive styling).
@@ -1157,7 +1157,7 @@ This screen is for Ministry of Education officers, state officials, and
 content moderators — NOT students.
 
 HEADER:
-- Ministry of Education seal + "Pariksha Mitra — Ministry Portal"
+- Ministry of Education seal + "ParikshaSetu — Ministry Portal"
 - "Restricted Access / प्रतिबंधित पहुँच" badge
 
 AUTH OPTIONS (tabs):
@@ -1779,7 +1779,7 @@ PERFORMANCE TARGETS:
 ## DESIGN TOKENS
 
 ```
-/* Pariksha Mitra Design System */
+/* ParikshaSetu Design System */
 
 /* Colours */
 --color-primary: #0033A0;        /* India Blue */
@@ -1825,6 +1825,6 @@ PERFORMANCE TARGETS:
 
 ---
 
-*Pariksha Mitra — Full UI Master Prompt Document | Version 2.0 | August 2026*
+*ParikshaSetu — Full UI Master Prompt Document | Version 2.0 | August 2026*
 *Confidential — Ministry of Education, Government of India*
 *All data and infrastructure: NIC MeghRaj | CERT-In Certified | DPDP Act 2023 Compliant*

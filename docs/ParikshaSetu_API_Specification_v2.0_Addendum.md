@@ -1,4 +1,4 @@
-# PARIKSHA MITRA — API Specification Addendum v2.0
+# ParikshaSetu — API Specification Addendum v2.0
 **National Free Competitive Exam Coaching Platform | Ministry of Education, Government of India**
 *MeghRaj Sovereign Cloud REST API Suite*
 

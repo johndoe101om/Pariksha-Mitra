@@ -1,196 +1,372 @@
+﻿/* ==========================================================
+   MINISTRY LOGIN - GIGW 3.0 SOVEREIGN DESIGN
+   ========================================================== */
+
 .ministry-login-container {
-  display: flex;
   min-height: 100vh;
-  width: 100%;
-  font-family: var(--font-family-base, 'Noto Sans', sans-serif);
+  display: flex;
+  flex-direction: column;
+  background-color: #F8FAFC;
+  font-family: 'Noto Sans', -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
-.ministry-login-left {
+.ministry-login-inner {
   flex: 1;
-  background-color: var(--color-primary, #0033A0);
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  min-height: calc(100vh - 5px);
+}
+
+@media (max-width: 960px) {
+  .ministry-login-inner {
+    grid-template-columns: 1fr;
+  }
+  .ministry-login-left {
+    display: none !important;
+  }
+}
+
+/* Left Sovereign Branding Column */
+.ministry-login-left {
+  background: linear-gradient(135deg, #001A5C 0%, #002B7F 50%, #060D18 100%);
   color: white;
+  padding: 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
-  padding: 40px;
   position: relative;
   overflow: hidden;
 }
 
-.ministry-login-branding {
-  text-align: center;
-  z-index: 1;
-}
-
-.ministry-emblem {
-  width: 120px;
-  margin-bottom: 24px;
-  filter: brightness(0) invert(1);
-}
-
-.ministry-login-branding h1 {
-  font-size: 32px;
-  font-weight: bold;
-  margin-bottom: 8px;
-  letter-spacing: 1px;
-}
-
-.ministry-login-branding h2 {
-  font-size: 24px;
-  font-weight: 600;
-  margin-bottom: 16px;
-  color: #E0E0E0;
-}
-
-.ministry-login-branding p {
-  font-size: 16px;
-  opacity: 0.8;
-}
-
-.ministry-login-right {
-  flex: 1;
-  background-color: var(--color-surface, #FFFFFF);
+.left-content-wrapper {
+  max-width: 520px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 40px;
+  flex-direction: column;
+  gap: 28px;
 }
 
-.ministry-login-form-container {
-  width: 100%;
-  max-width: 480px;
-}
-
-.ministry-security-notice {
+.moe-top-emblem-badge {
   display: flex;
   align-items: center;
   gap: 12px;
-  background-color: #FEF2F2;
-  color: var(--color-error, #BA1A1A);
-  padding: 16px;
-  border-radius: var(--radius-md, 6px);
-  margin-bottom: 32px;
-  font-size: 14px;
-  font-weight: 500;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 10px 16px;
+  border-radius: 8px;
+  width: fit-content;
 }
 
-.ministry-login-form-container h2 {
-  font-size: 28px;
-  font-weight: bold;
-  color: var(--color-on-surface, #1A1C1C);
-  margin-bottom: 8px;
+.gov-flag-em {
+  font-size: 24px;
 }
 
-.ministry-login-subtitle {
-  color: var(--color-outline, #747684);
-  margin-bottom: 32px;
-  font-size: 16px;
+.moe-top-emblem-badge strong {
+  display: block;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  color: #FFFFFF;
 }
 
-.ministry-login-form {
+.moe-top-emblem-badge span {
+  font-size: 11px;
+  color: #93C5FD;
+}
+
+.logo-center-box {
+  display: flex;
+  justify-content: flex-start;
+  padding: 10px 0;
+}
+
+.sovereign-mission-text h2 {
+  font-size: 26px;
+  font-weight: 900;
+  color: #FFFFFF;
+  margin: 0 0 8px 0;
+  line-height: 1.25;
+}
+
+.sovereign-mission-text p {
+  font-size: 13.5px;
+  color: #CBD5E1;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.feature-bullets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.bullet-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  color: #E2E8F0;
+  font-weight: 600;
+}
+
+.cloud-security-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(0, 0, 0, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-size: 11.5px;
+  color: #93C5FD;
+  width: fit-content;
+}
+
+/* Right Form Column */
+.ministry-login-right {
+  background: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px 32px;
+}
+
+.form-card-wrapper {
+  width: 100%;
+  max-width: 460px;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.form-group {
+.official-security-alert {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  background: #FFF7ED;
+  border: 1px solid #FFEDD5;
+  padding: 12px 14px;
+  border-radius: 8px;
+}
+
+.official-security-alert strong {
+  display: block;
+  font-size: 12px;
+  color: #9A3412;
+}
+
+.official-security-alert span {
+  font-size: 11px;
+  color: #C2410C;
+}
+
+.auth-header {
   display: flex;
   flex-direction: column;
+  gap: 4px;
+}
+
+.auth-step-pill {
+  font-size: 11px;
+  font-weight: 800;
+  color: #002B7F;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.auth-header h2 {
+  font-size: 22px;
+  font-weight: 900;
+  color: #00216E;
+  margin: 0;
+}
+
+.auth-header p {
+  font-size: 12.5px;
+  color: #64748B;
+  margin: 0;
+}
+
+/* Quick Demo Button */
+.quick-demo-login-box {
+  background: #EFF6FF;
+  border: 1.5px dashed #93C5FD;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.btn-quick-demo {
+  width: 100%;
+  background: #002B7F;
+  color: white;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 800;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   gap: 8px;
+  transition: all 0.2s;
 }
 
-.form-group label {
-  font-size: 14px;
-  font-weight: 600;
-  color: var(--color-on-surface, #1A1C1C);
+.btn-quick-demo:hover {
+  background: #FE6500;
+  box-shadow: 0 4px 12px rgba(254, 101, 0, 0.3);
 }
 
-.form-group input {
-  padding: 12px 16px;
-  border: 1px solid var(--color-outline-variant, #C4C5D5);
-  border-radius: var(--radius-md, 6px);
-  font-size: 16px;
-  outline: none;
-  transition: border-color 0.2s;
+.or-divider {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #94A3B8;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.5px;
 }
 
-.form-group input:focus {
-  border-color: var(--color-primary, #0033A0);
+.or-divider::before, .or-divider::after {
+  content: '';
+  flex: 1;
+  border-bottom: 1px solid #E2E8F0;
 }
 
-.otp-input-group {
+.or-divider span {
+  padding: 0 10px;
+}
+
+/* Form Styles */
+.ministry-form-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.m-input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.m-input-group label {
+  font-size: 11.5px;
+  font-weight: 800;
+  color: #334155;
+}
+
+.input-with-icon {
   position: relative;
   display: flex;
   align-items: center;
 }
 
-.otp-icon {
+.field-icon {
   position: absolute;
-  left: 16px;
-  color: var(--color-outline, #747684);
+  left: 12px;
+  color: #94A3B8;
+  pointer-events: none;
 }
 
-.otp-input {
+.input-with-icon input {
   width: 100%;
-  padding-left: 48px !important;
-  letter-spacing: 4px;
-  font-weight: bold;
+  padding: 10px 12px 10px 38px;
+  border: 1.5px solid #CBD5E1;
+  border-radius: 6px;
+  font-size: 13.5px;
+  outline: none;
+  transition: border-color 0.2s;
+  color: #1E293B;
+  background: #FFFFFF;
 }
 
-.ministry-btn-primary {
-  background-color: var(--color-primary, #0033A0);
+.input-with-icon input:focus {
+  border-color: #002B7F;
+  box-shadow: 0 0 0 3px rgba(0, 43, 127, 0.1);
+}
+
+.otp-styled-field {
+  letter-spacing: 6px;
+  font-weight: 900;
+  font-size: 18px !important;
+  color: #00216E !important;
+}
+
+.btn-primary-auth {
+  background: #002B7F;
   color: white;
   border: none;
-  padding: 14px;
-  border-radius: var(--radius-md, 6px);
-  font-size: 16px;
-  font-weight: 600;
+  padding: 12px 18px;
+  border-radius: 6px;
+  font-size: 13.5px;
+  font-weight: 800;
+  cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 8px;
+  transition: background 0.2s;
+  box-shadow: 0 2px 6px rgba(0, 43, 127, 0.2);
+}
+
+.btn-primary-auth:hover {
+  background: #001A4D;
+}
+
+.btn-back-step {
+  background: transparent;
+  border: 1px solid #CBD5E1;
+  color: #475569;
+  padding: 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
-  margin-top: 8px;
 }
 
-.ministry-btn-primary:hover {
-  background-color: var(--color-primary-dark, #00216E);
+.alternative-sso-group {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 4px;
 }
 
-.ministry-btn-secondary {
-  background-color: transparent;
-  color: var(--color-primary, #0033A0);
-  border: 1px solid var(--color-primary, #0033A0);
-  padding: 14px;
-  border-radius: var(--radius-md, 6px);
-  font-size: 16px;
-  font-weight: 600;
+.btn-sso-janparichay, .btn-sso-esign {
+  background: #F8FAFC;
+  border: 1px solid #CBD5E1;
+  color: #334155;
+  padding: 9px 12px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 700;
   cursor: pointer;
-  transition: background-color 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s;
 }
 
-.ministry-btn-secondary:hover {
-  background-color: rgba(0, 51, 160, 0.05);
+.btn-sso-janparichay:hover, .btn-sso-esign:hover {
+  background: #E2E8F0;
+  color: #002B7F;
 }
 
-.ministry-login-footer {
-  margin-top: 48px;
+.auth-compliance-footer {
   text-align: center;
-  color: var(--color-outline, #747684);
-  font-size: 14px;
+  border-top: 1px solid #F1F5F9;
+  padding-top: 16px;
 }
 
-@media (max-width: 768px) {
-  .ministry-login-container {
-    flex-direction: column;
-  }
-  .ministry-login-left {
-    padding: 32px 20px;
-    flex: none;
-  }
-  .ministry-emblem {
-    width: 80px;
-  }
+.auth-compliance-footer span {
+  font-size: 10.5px;
+  color: #64748B;
+  display: block;
+}
+
+.auth-compliance-footer p {
+  font-size: 10.5px;
+  color: #94A3B8;
+  margin: 4px 0 0 0;
 }

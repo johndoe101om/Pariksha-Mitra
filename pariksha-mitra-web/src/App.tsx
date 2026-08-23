@@ -145,6 +145,7 @@ function App() {
 
             {/* Ministry Layout Routes */}
             <Route path="/ministry" element={<MinistryLayout />}>
+              <Route index element={<Navigate to="/ministry/dashboard" replace />} />
               <Route path="dashboard" element={<MinistryDashboard />} />
               <Route path="analytics" element={<StateAnalytics />} />
               <Route path="map" element={<MapDeepDive />} />

@@ -1,11 +1,11 @@
-# PARIKSHA MITRA — PRD Addendum v2.0
+# ParikshaSetu — PRD Addendum v2.0
 **National Free Competitive Exam Coaching Platform | Ministry of Education, Government of India**
 *Document Version: 2.0 (August 2026)*
 
 ---
 
 ## Executive Summary & Strategic Alignment
-This document serves as the official Product Requirement Document (PRD) Addendum for the 18 breakthrough features integrated into the **Pariksha Mitra** ecosystem. These enhancements directly align with national mandates:
+This document serves as the official Product Requirement Document (PRD) Addendum for the 18 breakthrough features integrated into the **ParikshaSetu** ecosystem. These enhancements directly align with national mandates:
 - **National Education Policy (NEP 2020)**: School credit integration via Academic Bank of Credits (ABC) & UDISE+ database.
 - **Digital India Bhashini Mission**: Sovereign multi-lingual conversational voice AI in 14 official Indian languages.
 - **Universal Accessibility (RPwD Act 2016)**: Screen-reader optimizations, Indian Sign Language (ISL), Dyslexia modes, and assistive technologies.
