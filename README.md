@@ -1,4 +1,4 @@
-# 🇮🇳 Pariksha Mitra (परीक्षा मित्र)
+# 🇮🇳 ParikshaSetu (परीक्षा सेतु)
 ### National Free Competitive Exam Coaching & AI Mentorship Platform
 **An Initiative by the Ministry of Education, Government of India | भारत सरकार**
 
@@ -16,13 +16,13 @@
 
 ## 🏛️ Executive Summary & Vision
 
-**Pariksha Mitra (परीक्षा मित्र)** is India's flagship, sovereign digital learning ecosystem designed to democratize access to elite-quality competitive exam preparation. Aligned with the **National Education Policy (NEP) 2020** and the **Digital India** initiative, Pariksha Mitra guarantees **100% free, high-yield coaching, AI diagnostics, and 1-on-1 mentorship** for every aspirant across all 766 districts of the country.
+**ParikshaSetu (परीक्षा सेतु)** is India's flagship, sovereign digital learning ecosystem designed to bridge and democratize access to elite-quality competitive exam preparation. Aligned with the **National Education Policy (NEP) 2020** and the **Digital India** initiative, ParikshaSetu guarantees **100% free, high-yield coaching, AI diagnostics, and 1-on-1 mentorship** for every aspirant across all 766 districts of the country.
 
-Whether preparing in metropolitan hubs or remote rural villages with 2G connectivity, Pariksha Mitra bridges the educational divide by combining cutting-edge AI pedagogy with strict adherence to the **Guidelines for Indian Government Websites (GIGW 3.0)** and **WCAG 2.1 AAA accessibility standards**.
+Whether preparing in metropolitan hubs or remote rural villages with 2G connectivity, ParikshaSetu bridges the educational divide by combining cutting-edge AI pedagogy with strict adherence to the **Guidelines for Indian Government Websites (GIGW 3.0)** and **WCAG 2.1 AAA accessibility standards**.
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════════════════
-  🇮🇳 PARIKSHA MITRA — CORE PILLARS
+  🇮🇳 PARIKSHASETU — CORE PILLARS
   1. 100% Free Public Service (Zero Subscription, Zero Paywalls, Zero Commercial Monetization)
   2. Multi-Lingual Bhashini Voice AI (14 Indian Languages Supported Natively)
   3. Last-Mile Accessibility (Offline Peer-to-Peer Mesh Sync, India Post SD Cards, 2G Mode)
@@ -50,7 +50,7 @@ Whether preparing in metropolitan hubs or remote rural villages with 2G connecti
 
 ```
                                 ┌────────────────────────────────────────┐
-                                │   Pariksha Mitra Web Client (React 19) │
+                                │   ParikshaSetu Web Client (React 19)   │
                                 └───────────────────┬────────────────────┘
                                                     │
                  ┌──────────────────────────────────┴──────────────────────────────────┐
@@ -258,7 +258,7 @@ Whether preparing in metropolitan hubs or remote rural villages with 2G connecti
 
 ```
 ═══════════════════════════════════════════════════════════════════════════════════════════
-                 PARIKSHA MITRA - SOVEREIGN DESIGN TOKEN PALETTE
+                 PARIKSHASETU - SOVEREIGN DESIGN TOKEN PALETTE
 ═══════════════════════════════════════════════════════════════════════════════════════════
   🇮🇳 India Saffron   : #FF9933 / #FE6500 (National Spirit, Hero Accents, Badges)
   🇮🇳 Ashoka Navy     : #00216E / #002B7F / #0033A0 (Sovereign Authority, Primary UI)
@@ -300,7 +300,7 @@ Whether preparing in metropolitan hubs or remote rural villages with 2G connecti
 ## 📁 Repository Directory Structure
 
 ```
-Pariksha-Mitra/
+ParikshaSetu/
 ├── README.md                               # Master Project Documentation
 ├── netlify.toml                            # Netlify build configuration & SPA redirects
 ├── package.json                            # Root orchestration scripts (dev, build, install)
@@ -334,7 +334,7 @@ Pariksha-Mitra/
         │   ├── FloatingVoiceAssistant.css  # Waveform equalizer & language selector
         │   ├── GIGWFooter.tsx              # Official GIGW 3.0 government footer
         │   ├── GIGWPageHeader.tsx          # Standardized GIGW 3.0 Hero Header
-        │   ├── GIGWPageHeader.css          # Single-line breadcrumb flexbox rules
+        │   ├── GIGWPageHeader.css          # Single-Line breadcrumb flexbox rules
         │   ├── ParikshaMitraLogo.tsx       # Vector branding alias
         │   └── ParikshaSetuLogo.tsx        # Official vector Ashoka Chakra branding emblem
         ├── context/                        # React Global Context Providers
@@ -484,7 +484,7 @@ The repository includes a ready-to-use [`netlify.toml`](file:///c:/Users/91919/O
 
 ## 🔒 Security, Compliance & Data Sovereignty
 
-1. **Zero Data Commercialization**: Pariksha Mitra is a **100% free public service initiative** funded by the Ministry of Education. Student data is never commercialized, monetized, or shared with third-party advertising networks.
+1. **Zero Data Commercialization**: ParikshaSetu is a **100% free public service initiative** funded by the Ministry of Education. Student data is never commercialized, monetized, or shared with third-party advertising networks.
 2. **DPDP Act 2023 Compliance**: Built in strict adherence to the **Digital Personal Data Protection Act 2023**; all student telemetry is encrypted at rest using AES-256 and in transit via TLS 1.3.
 3. **Data Localization**: Fully engineered for sovereign deployment on **NIC MeghRaj Government Cloud** within Indian geographical borders.
 4. **WCAG 2.1 AAA Accessibility**: Native screen-reader support, keyboard accessibility focus traps, high-contrast themes ($14:1$), and multilingual voice navigation.
@@ -510,7 +510,7 @@ Detailed technical specifications and architectural documentation are available 
 
 ## 👥 Contributing & Governance
 
-Pariksha Mitra is developed under the open government architecture framework. Contributions that enhance accessibility, regional language models, and low-bandwidth optimizations are welcomed.
+ParikshaSetu is developed under the open government architecture framework. Contributions that enhance accessibility, regional language models, and low-bandwidth optimizations are welcomed.
 
 1. Fork the repository
 2. Create your feature branch (`git checkout -b feature/BhashiniVoiceEnhancement`)
@@ -523,7 +523,7 @@ Pariksha Mitra is developed under the open government architecture framework. Co
 ## 📜 Official Declaration
 
 > *"Education is the most powerful weapon which you can use to change the world."*  
-> **Pariksha Mitra — Empowering Every Aspirant, Connecting Every Village, Building Viksit Bharat 2047.** 🇮🇳
+> **ParikshaSetu — Empowering Every Aspirant, Connecting Every Village, Building Viksit Bharat 2047.** 🇮🇳
 
 ---
 **Ministry of Education, Government of India** | Designed & Developed for India's Future Leaders.
