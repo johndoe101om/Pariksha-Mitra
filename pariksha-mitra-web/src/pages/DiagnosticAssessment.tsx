@@ -135,7 +135,7 @@ export default function DiagnosticAssessment() {
   const [messages, setMessages] = useState<Message[]>([]);
 
   useEffect(() => {
-    const userStr = localStorage.getItem('pariksha_mitra_user');
+    const userStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
     let uName = 'Rahul';
     let uExam = 'UPSC CSE';
     if (userStr) {
@@ -156,7 +156,7 @@ export default function DiagnosticAssessment() {
     const initialMsg: Message = {
       id: 'msg-1',
       sender: 'ai',
-      text: `Namaste ${uName}! 🙏 I am your Pariksha Mitra AI Diagnostic Tutor. I will guide you through an adaptive diagnostic assessment for **${uExam}** to identify your syllabus strengths and weak areas.`,
+      text: `Namaste ${uName}! 🙏 I am your ParikshaSetu AI Diagnostic Tutor. I will guide you through an adaptive diagnostic assessment for **${uExam}** to identify your syllabus strengths and weak areas.`,
       hindiText: `नमस्ते ${uName}! मैं आपका AI नैदानिक शिक्षक हूँ। मैं आपकी तैयारी के स्तर का मूल्यांकन करूँगा।`,
       timestamp: new Date().toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' }),
       type: 'intro'

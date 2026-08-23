@@ -503,7 +503,7 @@ export default function SyllabusPage() {
   const [userExamPreference, setUserExamPreference] = useState('UPSC CSE');
 
   useEffect(() => {
-    const userStr = localStorage.getItem('pariksha_mitra_user');
+    const userStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
     if (userStr) {
       try {
         const u = JSON.parse(userStr);
@@ -542,12 +542,12 @@ export default function SyllabusPage() {
     setSelectedExamId(examId);
     const chosen = SYLLABUS_DATABASE.find(e => e.id === examId);
     if (chosen) {
-      const userStr = localStorage.getItem('pariksha_mitra_user');
+      const userStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
       if (userStr) {
         try {
           const u = JSON.parse(userStr);
           u.targetExam = chosen.name;
-          localStorage.setItem('pariksha_mitra_user', JSON.stringify(u));
+          localStorage.setItem('parikshasetu_user', JSON.stringify(u));
           setUserExamPreference(chosen.name);
         } catch (e) {}
       }
@@ -805,7 +805,7 @@ export default function SyllabusPage() {
         <div className="callout-text">
           <h3>Unsure where to start in {currentExam.name}?</h3>
           <p>
-            Chat with the <strong>Pariksha Mitra AI Diagnostic Tutor</strong>. 
+            Chat with the <strong>ParikshaSetu AI Diagnostic Tutor</strong>. 
             The AI asks 5 rapid adaptive questions to assess your syllabus mastery and creates a personalized 30-day study timetable.
           </p>
         </div>

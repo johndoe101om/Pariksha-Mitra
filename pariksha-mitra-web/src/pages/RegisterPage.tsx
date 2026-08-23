@@ -21,7 +21,7 @@ import {
   PartyPopper
 } from 'lucide-react';
 import './RegisterPage.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 
 const STATES = [
   "Andaman and Nicobar Islands", "Andhra Pradesh", "Arunachal Pradesh", "Assam", "Bihar", 
@@ -196,8 +196,8 @@ const RegisterPage: React.FC = () => {
       isVerified: true
     };
     
-    localStorage.setItem('pariksha_mitra_user', JSON.stringify(userProfile));
-    localStorage.setItem('pariksha_mitra_logged_in', 'true');
+    localStorage.setItem('parikshasetu_user', JSON.stringify(userProfile));
+    localStorage.setItem('parikshasetu_logged_in', 'true');
     
     nextStep(); // Go to success step
   };
@@ -219,7 +219,7 @@ const RegisterPage: React.FC = () => {
       <div className="register-left">
         <div className="brand-content">
           <div className="brand-logo-container" style={{ marginBottom: '24px' }}>
-            <ParikshaMitraLogo layout="vertical" theme="light" height={120} />
+            <ParikshaSetuLogo layout="vertical" theme="light" height={120} />
             <p className="brand-tagline" style={{ marginTop: '8px' }}>Your National Education Partner</p>
           </div>
           
@@ -571,8 +571,8 @@ const RegisterPage: React.FC = () => {
                 </div>
                 
                 <div className="success-content">
-                  <h2>Welcome to Pariksha Mitra,<br/>{formData.name.split(' ')[0]}! 🎉</h2>
-                  <p className="hindi-text">पारीक्षा मित्रा में आपका स्वागत है!</p>
+                  <h2>Welcome to ParikshaSetu,<br/>{formData.name.split(' ')[0]}! 🎉</h2>
+                  <p className="hindi-text">परीक्षा सेतु में आपका स्वागत है!</p>
                   
                   <div className="success-card">
                     <p>Your personalized study plan is ready based on your selected exams.</p>

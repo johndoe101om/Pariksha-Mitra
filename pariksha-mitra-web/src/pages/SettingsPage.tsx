@@ -41,7 +41,7 @@ export default function SettingsPage() {
   });
 
   useEffect(() => {
-    const dataStr = localStorage.getItem('pariksha_mitra_user');
+    const dataStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
     if (dataStr) {
       try {
         const parsed = JSON.parse(dataStr);
@@ -73,7 +73,7 @@ export default function SettingsPage() {
   const handleSave = (e?: React.FormEvent) => {
     if (e) e.preventDefault();
     try {
-      const userStr = localStorage.getItem('pariksha_mitra_user');
+      const userStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
       const currentUser = userStr ? JSON.parse(userStr) : {};
       const updated = {
         ...currentUser,
@@ -84,14 +84,14 @@ export default function SettingsPage() {
         smsNotifs: settings.smsAlerts,
         whatsappAlerts: settings.whatsappDigest
       };
-      localStorage.setItem('pariksha_mitra_user', JSON.stringify(updated));
+      localStorage.setItem('parikshasetu_user', JSON.stringify(updated));
       setSaveSuccess(true);
       setTimeout(() => setSaveSuccess(false), 3000);
     } catch (e) {}
   };
 
   const handleLogout = () => {
-    localStorage.removeItem('pariksha_mitra_logged_in');
+    localStorage.removeItem('parikshasetu_logged_in'); localStorage.removeItem('pariksha_mitra_logged_in');
     navigate('/');
   };
 
@@ -183,7 +183,7 @@ export default function SettingsPage() {
             <div className="settings-section">
               <div className="section-heading">
                 <h2>🌐 App & Accessibility Preferences</h2>
-                <p>Customize how Pariksha Mitra displays lectures, AI chat responses, and audio.</p>
+                <p>Customize how ParikshaSetu displays lectures, AI chat responses, and audio.</p>
               </div>
 
               <div className="settings-group">

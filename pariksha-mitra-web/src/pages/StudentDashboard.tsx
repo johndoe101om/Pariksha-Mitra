@@ -38,7 +38,7 @@ export const StudentDashboard: React.FC = () => {
       setTimeRemaining(`1h 24m ${59 - (now.getSeconds() % 60)}s`);
     }, 1000);
     
-    const userDataStr = localStorage.getItem('pariksha_mitra_user');
+    const userDataStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
     if (userDataStr) {
       try {
         const userData = JSON.parse(userDataStr);

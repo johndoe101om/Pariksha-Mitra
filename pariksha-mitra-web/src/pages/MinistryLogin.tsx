@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ShieldCheck, ArrowRight, Lock } from 'lucide-react';
 import './MinistryLogin.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 
 const MinistryLogin: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -25,7 +25,7 @@ const MinistryLogin: React.FC = () => {
       <div className="ministry-login-left">
         <div className="ministry-login-branding">
           <div style={{ marginBottom: '24px' }}>
-            <ParikshaMitraLogo layout="vertical" theme="light" height={130} />
+            <ParikshaSetuLogo layout="vertical" theme="light" height={130} />
           </div>
           <h1>Government of India</h1>
           <p>Ministry of Education National Portal</p>

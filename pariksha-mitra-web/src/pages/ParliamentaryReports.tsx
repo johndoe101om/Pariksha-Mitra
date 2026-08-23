@@ -62,7 +62,7 @@ const ParliamentaryReports: React.FC = () => {
               <h4>Ministry of Education</h4>
             </div>
             <div className="doc-body">
-              <p className="subject"><strong>Subject:</strong> Status of Pariksha Mitra National Platform implementation</p>
+              <p className="subject"><strong>Subject:</strong> Status of ParikshaSetu National Platform implementation</p>
               <p>In response to the query regarding the digital education initiative, the following data is submitted for the period specified:</p>
               <ul>
                 <li>Total active registrations stand at <strong>42,35,678</strong>.</li>

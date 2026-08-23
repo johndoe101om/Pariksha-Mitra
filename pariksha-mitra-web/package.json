@@ -3,7 +3,7 @@
   "private": true,
   "version": "1.0.0",
   "type": "module",
-  "description": "Pariksha Mitra — National Free Competitive Exam Coaching Platform | Ministry of Education, Government of India",
+  "description": "ParikshaSetu — National Free Competitive Exam Coaching Platform | Ministry of Education, Government of India",
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",

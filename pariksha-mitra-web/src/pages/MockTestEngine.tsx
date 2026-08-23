@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Flag, ChevronLeft, ChevronRight, AlertCircle } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import './MockTestEngine.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 
 const MOCK_QUESTIONS = Array.from({ length: 100 }, (_, i) => ({
   id: i + 1,
@@ -110,7 +110,7 @@ export default function MockTestEngine() {
       {/* Topbar */}
       <header className="engine-topbar">
         <div className="engine-logo" style={{ display: 'flex', alignItems: 'center' }}>
-          <ParikshaMitraLogo theme="dark" height={38} />
+          <ParikshaSetuLogo theme="dark" height={38} />
         </div>
         <div className="test-title">SSC CGL Tier 1 - Full Mock 1</div>
         <div className={`engine-timer ${timeLeft < 300 ? 'danger' : ''}`}>

@@ -24,7 +24,7 @@ import {
   Database
 } from 'lucide-react';
 import './MinistryLayout.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 import FloatingVoiceAssistant from '../components/FloatingVoiceAssistant';
 
 const MinistryLayout: React.FC = () => {
@@ -124,7 +124,7 @@ const MinistryLayout: React.FC = () => {
         <aside className={`ministry-sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <div className="ministry-brand">
             <div className="logo-wrap" onClick={() => navigate('/ministry/dashboard')} style={{ cursor: 'pointer' }}>
-              <ParikshaMitraLogo theme="light" height={44} />
+              <ParikshaSetuLogo theme="light" height={44} />
             </div>
             <button className="close-menu-btn" onClick={closeMobileMenu}>
               <X size={24} />

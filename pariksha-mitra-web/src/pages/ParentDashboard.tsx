@@ -248,11 +248,11 @@ export const ParentDashboard: React.FC = () => {
                 <div className="sms-bubble-body">
                   {reportLang === 'hi' ? (
                     <p>
-                      <strong>परीक्षा मित्र रिपोर्ट:</strong> राहुल ने इस सप्ताह 21.5 घंटे पढ़ाई की और 145 प्रश्न 84% सटीकता के साथ हल किए। मॉक टेस्ट रैंक: Top 6%। पूरी रिपोर्ट देखें: <u>pm.gov.in/r/9921</u>
+                      <strong>परीक्षा सेतु रिपोर्ट:</strong> राहुल ने इस सप्ताह 21.5 घंटे पढ़ाई की और 145 प्रश्न 84% सटीकता के साथ हल किए। मॉक टेस्ट रैंक: Top 6%। पूरी रिपोर्ट देखें: <u>pm.gov.in/r/9921</u>
                     </p>
                   ) : (
                     <p>
-                      <strong>Pariksha Mitra Update:</strong> Rahul studied 21.5h this week & solved 145 MCQs with 84% accuracy. Test Rank: Top 6%. Full report: <u>pm.gov.in/r/9921</u>
+                      <strong>ParikshaSetu Update:</strong> Rahul studied 21.5h this week & solved 145 MCQs with 84% accuracy. Test Rank: Top 6%. Full report: <u>pm.gov.in/r/9921</u>
                     </p>
                   )}
                   <span className="sms-timestamp">Sunday, 08:00 PM • NIC Gateway</span>

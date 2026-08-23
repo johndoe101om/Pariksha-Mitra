@@ -164,7 +164,7 @@ export const SchoolIntegration: React.FC = () => {
           <div className="si-tab-pane">
             <div className="si-assign-card">
               <h3>Create Digital Homework / Mock Test Task</h3>
-              <p>Select syllabus chapters from DIKSHA or Pariksha Mitra vault to assign to all 45 students in Class 12-A.</p>
+              <p>Select syllabus chapters from DIKSHA or ParikshaSetu vault to assign to all 45 students in Class 12-A.</p>
               <button className="si-create-task-btn">
                 <PlusCircle size={16} /> Broadcast 25-Question Test to Class 12-A
               </button>

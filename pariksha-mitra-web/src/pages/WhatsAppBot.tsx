@@ -231,7 +231,7 @@ export const WhatsAppBot: React.FC = () => {
                 </div>
                 <div className="wa-name-col">
                   <div className="wa-name-row">
-                    <strong>Pariksha Mitra Bot</strong>
+                    <strong>ParikshaSetu Bot</strong>
                     <span className="wa-verified-badge" title="Official Government Bot">✓</span>
                   </div>
                   <span className="wa-status-text">Official AI Tutor • Online</span>
@@ -248,7 +248,7 @@ export const WhatsAppBot: React.FC = () => {
 
               {/* Message 1: Daily Greeting & 7 AM Capsule */}
               <div className="wa-bubble incoming">
-                <div className="wa-sender-tag">Pariksha Mitra AI • 7:00 AM</div>
+                <div className="wa-sender-tag">ParikshaSetu AI • 7:00 AM</div>
                 <p>
                   🇮🇳 <strong>Good Morning Rahul!</strong> Here is your Daily 5-MCQ Capsule for <strong>SSC CGL 2026</strong>.
                 </p>

@@ -163,7 +163,7 @@ const MentorSession: React.FC = () => {
             )}
 
             <div className="mentor-watermark-overlay">
-              <ShieldCheck size={16} /> Pariksha Mitra Sovereign Mentorship
+              <ShieldCheck size={16} /> ParikshaSetu Sovereign Mentorship
             </div>
             
             <div className="participant-tag mentor-tag">

@@ -281,7 +281,7 @@ const BookMentor: React.FC = () => {
                 <Video size={18} color="#0033A0" />
                 <div>
                   <span className="det-label">Meeting Room</span>
-                  <strong>Pariksha Mitra HD Room #{createdBookingId.substring(0, 8)}</strong>
+                  <strong>ParikshaSetu HD Room #{createdBookingId.substring(0, 8)}</strong>
                 </div>
               </div>
             </div>

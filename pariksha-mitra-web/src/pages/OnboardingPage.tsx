@@ -82,7 +82,7 @@ const OnboardingPage: React.FC = () => {
             </div>
             <div className="content-area">
               <h2 className="step-heading">Free Quality Coaching for Every Aspirant<br />हर उम्मीदवार के लिए मुफ़्त गुणवत्तापूर्ण कोचिंग</h2>
-              <p className="step-body">Pariksha Mitra is 100% free, government-backed coaching for SSC, Banking, Railway, UPSC, NEET, JEE, and State PSC exams.</p>
+              <p className="step-body">ParikshaSetu is 100% free, government-backed coaching for SSC, Banking, Railway, UPSC, NEET, JEE, and State PSC exams.</p>
             </div>
           </>
         )}

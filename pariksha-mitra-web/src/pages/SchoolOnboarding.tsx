@@ -21,8 +21,8 @@ const SchoolOnboarding: React.FC = () => {
         breadcrumbs={[{ label: 'Home', labelHi: 'मुख्य पृष्ठ', path: '/dashboard' }, { label: 'Institutional Registration', labelHi: 'संस्थागत पंजीकरण' }]}
         title="Institutional Registration"
         titleHi="संस्थागत पंजीकरण"
-        description="Onboard your school and students to the Pariksha Mitra platform"
-        descriptionHi="अपने स्कूल और छात्रों को परीक्षा मित्र प्लेटफॉर्म पर पंजीकृत करें"
+        description="Onboard your school and students to the ParikshaSetu platform"
+        descriptionHi="अपने स्कूल और छात्रों को परीक्षा सेतु प्लेटफॉर्म पर पंजीकृत करें"
         icon={Building}
         badge="Powered by SAMAGRA Shiksha"
       />
@@ -151,7 +151,7 @@ const SchoolOnboarding: React.FC = () => {
           <div className="onboarding-step-content success-step">
             <div className="onboarding-success-icon"><CheckCircle size={64} aria-hidden="true" /></div>
             <h2 className="onboarding-step-title">Registration Successful! <span className="hi">पंजीकरण सफल!</span></h2>
-            <p>Your school has been successfully registered on Pariksha Mitra. 33 students have been onboarded.</p>
+            <p>Your school has been successfully registered on ParikshaSetu. 33 students have been onboarded.</p>
             
             <div className="onboarding-next-steps">
               <div className="onboarding-qr-box">

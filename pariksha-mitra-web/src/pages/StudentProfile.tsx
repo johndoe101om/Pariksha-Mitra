@@ -34,7 +34,7 @@ export default function StudentProfile() {
   const [initials, setInitials] = useState('RK');
 
   useEffect(() => {
-    const dataStr = localStorage.getItem('pariksha_mitra_user');
+    const dataStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
     if (dataStr) {
       try {
         const parsed = JSON.parse(dataStr);
@@ -66,7 +66,7 @@ export default function StudentProfile() {
   const handleSaveProfile = (e: React.FormEvent) => {
     e.preventDefault();
     try {
-      localStorage.setItem('pariksha_mitra_user', JSON.stringify(userData));
+      localStorage.setItem('parikshasetu_user', JSON.stringify(userData));
       setIsEditing(false);
       setSaveSuccess(true);
       setTimeout(() => setSaveSuccess(false), 3000);

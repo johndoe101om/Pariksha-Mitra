@@ -107,7 +107,7 @@ export default function VideoPlayer() {
 
               {/* Live Sovereign Watermark */}
               <div className="sovereign-video-badge">
-                <Shield size={13} /> Pariksha Mitra Sovereign Stream (100% Free)
+                <Shield size={13} /> ParikshaSetu Sovereign Stream (100% Free)
               </div>
             </div>
 

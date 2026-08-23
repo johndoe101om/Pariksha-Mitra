@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
+﻿import React, { createContext, useContext, useState, useEffect, ReactNode } from 'react';
 
 export interface UserData {
   name: string;
@@ -48,26 +48,26 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   useEffect(() => {
-    const savedUser = localStorage.getItem('pariksha_mitra_user');
+    const savedUser = localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     }
   }, []);
 
   const login = () => {
-    let savedUser = localStorage.getItem('pariksha_mitra_user');
+    let savedUser = localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user');
     if (savedUser) {
       setUser(JSON.parse(savedUser));
     } else {
       setUser(defaultDemoUser);
-      localStorage.setItem('pariksha_mitra_user', JSON.stringify(defaultDemoUser));
+      localStorage.setItem('parikshasetu_user', JSON.stringify(defaultDemoUser));
     }
     setIsLoggedIn(true);
   };
 
   const register = (data: UserData) => {
     setUser(data);
-    localStorage.setItem('pariksha_mitra_user', JSON.stringify(data));
+    localStorage.setItem('parikshasetu_user', JSON.stringify(data));
     setIsLoggedIn(true);
   };
 
@@ -79,7 +79,7 @@ export const UserProvider: React.FC<{ children: ReactNode }> = ({ children }) =>
     if (user) {
       const updatedUser = { ...user, ...partial };
       setUser(updatedUser);
-      localStorage.setItem('pariksha_mitra_user', JSON.stringify(updatedUser));
+      localStorage.setItem('parikshasetu_user', JSON.stringify(updatedUser));
     }
   };
 

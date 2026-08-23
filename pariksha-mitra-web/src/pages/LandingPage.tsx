@@ -10,7 +10,7 @@ import {
 } from 'lucide-react';
 import { useUser } from '../context/UserContext';
 import './LandingPage.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 
 const LandingPage: React.FC = () => {
   const navigate = useNavigate();
@@ -39,7 +39,7 @@ const LandingPage: React.FC = () => {
     try {
       login();
     } catch (err) {
-      localStorage.setItem('pariksha_mitra_logged_in', 'true');
+      localStorage.setItem('parikshasetu_logged_in', 'true');
     }
     navigate('/dashboard');
   };
@@ -140,7 +140,7 @@ const LandingPage: React.FC = () => {
             />
             <div className="emblem-divider"></div>
             <div className="brand-lockup-box">
-              <ParikshaMitraLogo theme="dark" height={52} />
+              <ParikshaSetuLogo theme="dark" height={52} />
               <div className="sub-ministry-label">
                 Department of Higher Education & School Education • Ministry of Education, Govt. of India
               </div>
@@ -248,7 +248,7 @@ const LandingPage: React.FC = () => {
               India's Free <span className="text-saffron">AI-Powered</span> National Exam Coaching Platform
             </h1>
             <h2 className="hero-national-subtitle-hi">
-              परीक्षा मित्र — भारत सरकार का निःशुल्क राष्ट्रीय परीक्षा कोचिंग एवं मार्गदर्शन पोर्टल
+              परीक्षा सेतु — भारत सरकार का निःशुल्क राष्ट्रीय परीक्षा कोचिंग एवं मार्गदर्शन पोर्टल
             </h2>
 
             <p className="hero-mission-desc">
@@ -265,7 +265,7 @@ const LandingPage: React.FC = () => {
                 <Sparkles size={16} /> Enter Live Student Dashboard
               </button>
 
-              <button className="btn-hero-brochure" onClick={() => alert('Downloading Pariksha Mitra National Scheme Citizen Charter (PDF)...')}>
+              <button className="btn-hero-brochure" onClick={() => alert('Downloading ParikshaSetu National Scheme Citizen Charter (PDF)...')}>
                 <Download size={15} /> Scheme Brochure (PDF)
               </button>
             </div>
@@ -635,7 +635,7 @@ const LandingPage: React.FC = () => {
               <span className="inc-badge">🇮🇳 100% PAN-INDIA COVERAGE</span>
               <h2>Bridging the Urban-Rural Education Divide</h2>
               <p>
-                From Jammu & Kashmir to Kanyakumari, and Gujarat to Arunachal Pradesh — Pariksha Mitra is actively serving aspirants across all 28 States and 8 Union Territories in 12 regional languages.
+                From Jammu & Kashmir to Kanyakumari, and Gujarat to Arunachal Pradesh — ParikshaSetu is actively serving aspirants across all 28 States and 8 Union Territories in 12 regional languages.
               </p>
               <div className="inc-stats-row">
                 <div className="inc-stat">
@@ -691,7 +691,7 @@ const LandingPage: React.FC = () => {
           <div className="gov-container footer-grid-four">
             {/* Col 1: Brand & Office */}
             <div className="footer-col-brand">
-              <ParikshaMitraLogo theme="light" height={48} />
+              <ParikshaSetuLogo theme="light" height={48} />
               <p className="footer-office-address">
                 Department of Higher Education,<br />
                 Ministry of Education, Government of India,<br />
@@ -766,7 +766,7 @@ const LandingPage: React.FC = () => {
             </div>
 
             <div className="copyright-line">
-              © 2026 Pariksha Mitra. Designed and Developed by Ministry of Education, Hosted on NIC MeghRaj Cloud.
+              © 2026 ParikshaSetu. Designed and Developed by Ministry of Education, Hosted on NIC MeghRaj Cloud.
             </div>
 
             <div className="cert-statement">

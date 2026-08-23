@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useNavigate, Link } from 'react-router-dom';
 import { Shield, Lock, Eye, EyeOff, ArrowLeft, Info, CheckCircle, Sparkles } from 'lucide-react';
 import './LoginPage.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 
 const LoginPage: React.FC = () => {
   const [step, setStep] = useState(1);
@@ -64,7 +64,7 @@ const LoginPage: React.FC = () => {
   };
 
   const handleVerify = () => {
-    if (!localStorage.getItem('pariksha_mitra_user')) {
+    if (!(localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'))) {
       const defaultUser = {
         name: 'Rahul Kumar',
         phone: aadhaar.length >= 10 ? aadhaar : '9876543210',
@@ -80,9 +80,9 @@ const LoginPage: React.FC = () => {
         registeredAt: new Date().toISOString(),
         isVerified: true
       };
-      localStorage.setItem('pariksha_mitra_user', JSON.stringify(defaultUser));
+      localStorage.setItem('parikshasetu_user', JSON.stringify(defaultUser));
     }
-    localStorage.setItem('pariksha_mitra_logged_in', 'true');
+    localStorage.setItem('parikshasetu_logged_in', 'true');
     navigate('/dashboard');
   };
 
@@ -97,7 +97,7 @@ const LoginPage: React.FC = () => {
     <div className="login-container">
       <div className="login-left">
         <div style={{ marginBottom: '20px' }}>
-          <ParikshaMitraLogo layout="vertical" theme="light" height={130} />
+          <ParikshaSetuLogo layout="vertical" theme="light" height={130} />
         </div>
         <p className="branding-subtitle">National Education Platform<br />Ministry of Education, Govt of India</p>
       </div>
@@ -105,7 +105,7 @@ const LoginPage: React.FC = () => {
       <div className="login-right">
         <div className="login-box">
           <div className="pm-logo-mobile" style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px' }}>
-            <ParikshaMitraLogo layout="horizontal" theme="dark" height={44} />
+            <ParikshaSetuLogo layout="horizontal" theme="dark" height={44} />
           </div>
           
           {step === 1 ? (
@@ -192,7 +192,7 @@ const LoginPage: React.FC = () => {
               </button>
 
               <Link to="/register" className="link-text" style={{ cursor: 'pointer', display: 'block', marginTop: '16px', textAlign: 'center' }}>
-                New to Pariksha Mitra? Register Free / नया खाता बनाएं
+                New to ParikshaSetu? Register Free / नया खाता बनाएं
               </Link>
             </>
           ) : (

@@ -39,7 +39,7 @@ import {
   Heart
 } from 'lucide-react';
 import './AppLayout.css';
-import ParikshaMitraLogo from '../components/ParikshaMitraLogo';
+import ParikshaSetuLogo from '../components/ParikshaSetuLogo';
 import FloatingVoiceAssistant from '../components/FloatingVoiceAssistant';
 
 const AppLayout: React.FC = () => {
@@ -57,7 +57,7 @@ const AppLayout: React.FC = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    const userDataStr = localStorage.getItem('pariksha_mitra_user');
+    const userDataStr = (localStorage.getItem('parikshasetu_user') || localStorage.getItem('pariksha_mitra_user'));
     if (userDataStr) {
       try {
         const userData = JSON.parse(userDataStr);
@@ -74,7 +74,7 @@ const AppLayout: React.FC = () => {
   }, []);
 
   const handleLogout = () => {
-    localStorage.removeItem('pariksha_mitra_logged_in');
+    localStorage.removeItem('parikshasetu_logged_in'); localStorage.removeItem('pariksha_mitra_logged_in');
     navigate('/');
   };
 
@@ -194,7 +194,7 @@ const AppLayout: React.FC = () => {
         <aside className={`sidebar ${mobileMenuOpen ? 'mobile-open' : ''}`}>
           <div className="sidebar-header">
             <div className="sidebar-brand-box" onClick={() => navigate('/dashboard')} style={{ cursor: 'pointer' }}>
-              <ParikshaMitraLogo theme="dark" height={44} />
+              <ParikshaSetuLogo theme="dark" height={44} />
             </div>
             <button className="close-menu-btn" onClick={closeMobileMenu}>
               <X size={24} />
