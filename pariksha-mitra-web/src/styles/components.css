@@ -325,9 +325,9 @@
 .modal {
   background-color: var(--color-surface);
   border-radius: var(--radius-xl);
-  padding: var(--spacing-4);
+  padding: clamp(16px, 3vw, 32px);
   width: 100%;
-  max-width: 500px;
+  max-width: min(520px, calc(100vw - 24px));
   max-height: 90vh;
   overflow-y: auto;
   box-shadow: 0 10px 30px rgba(0,0,0,0.1);
@@ -621,7 +621,7 @@ textarea:focus-visible {
 .mentor-root,
 .leaderboard-root,
 .settings-root {
-  max-width: 1440px !important;
+  max-width: 1600px !important;
   margin: 0 auto !important;
   width: 100% !important;
   padding: 0 !important;

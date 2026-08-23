@@ -69,14 +69,14 @@
 /* Classrooms Grid */
 .si-classrooms-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 20px;
 }
 
 .si-class-card {
   background: #FFFFFF;
   border-radius: 18px;
-  padding: 24px;
+  padding: clamp(16px, 3vw, 24px);
   border: 1px solid #E2E8F0;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -84,6 +84,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .si-class-card:hover {
@@ -307,4 +308,10 @@
   cursor: pointer;
   margin-top: 8px;
   box-shadow: 0 4px 12px rgba(0, 51, 160, 0.3);
+}
+
+@media (max-width: 640px) {
+  .si-students-table-card, .si-assign-card, .si-report-card {
+    padding: 16px;
+  }
 }

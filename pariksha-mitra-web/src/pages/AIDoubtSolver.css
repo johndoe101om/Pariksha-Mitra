@@ -1,4 +1,4 @@
-﻿/* Redesigned AI Doubt Solver CSS */
+/* Redesigned AI Doubt Solver CSS */
 .ai-doubt-solver-page {
   padding: 0;
   max-width: 1440px;
@@ -748,4 +748,26 @@
   border-radius: 8px;
   font-size: 11.5px;
   font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .doubt-chat-main-card {
+    height: auto;
+    min-height: 480px;
+    max-height: calc(100vh - 200px);
+  }
+  .messages-scroll-stream {
+    padding: 14px;
+    gap: 14px;
+  }
+  .message-bubble-wrapper {
+    max-width: 96%;
+    gap: 8px;
+  }
+  .doubt-input-station {
+    padding: 10px 12px;
+  }
+  .doubt-solver-hero-bar {
+    padding: 16px;
+  }
 }

@@ -16,6 +16,7 @@ export default function MockTestEngine() {
   const [currentQ, setCurrentQ] = useState(1);
   const [timeLeft, setTimeLeft] = useState(180 * 60); // 180 minutes
   const [showConfirm, setShowConfirm] = useState(false);
+  const [paletteOpen, setPaletteOpen] = useState(false);
   
   // State: 0=not visited, 1=not answered, 2=answered, 3=marked, 4=answered&marked
   const [qStates, setQStates] = useState(Array(100).fill(0));
@@ -110,11 +111,16 @@ export default function MockTestEngine() {
       {/* Topbar */}
       <header className="engine-topbar">
         <div className="engine-logo" style={{ display: 'flex', alignItems: 'center' }}>
-          <ParikshaSetuLogo theme="dark" height={38} />
+          <ParikshaSetuLogo theme="dark" height={34} />
         </div>
         <div className="test-title">SSC CGL Tier 1 - Full Mock 1</div>
-        <div className={`engine-timer ${timeLeft < 300 ? 'danger' : ''}`}>
-          <Clock /> {formatTime(timeLeft)}
+        <div className="engine-topbar-right">
+          <button className="mobile-palette-toggle-btn" onClick={() => setPaletteOpen(!paletteOpen)}>
+            Palette ({stats.answered}/100)
+          </button>
+          <div className={`engine-timer ${timeLeft < 300 ? 'danger' : ''}`}>
+            <Clock /> {formatTime(timeLeft)}
+          </div>
         </div>
       </header>
 
@@ -157,28 +163,37 @@ export default function MockTestEngine() {
           </div>
 
           <div className="engine-footer-actions">
-            <button className="btn-engine-clear" onClick={handleClear}>Clear Response</button>
+            <button className="btn-engine-clear" onClick={handleClear}>Clear</button>
             <div className="nav-buttons">
               <button className="btn-engine-nav" onClick={handlePrev} disabled={currentQ === 1}>
-                <ChevronLeft size={20} /> Previous
+                <ChevronLeft size={18} /> Prev
               </button>
               <button className="btn-engine-nav primary" onClick={handleNext}>
-                Save & Next <ChevronRight size={20} />
+                Save & Next <ChevronRight size={18} />
               </button>
             </div>
           </div>
         </div>
 
+        {/* Mobile Palette Overlay */}
+        {paletteOpen && <div className="palette-backdrop-overlay" onClick={() => setPaletteOpen(false)}></div>}
+
         {/* Right Palette */}
-        <div className="engine-sidebar">
-          <div className="palette-section">
+        <div className={`engine-sidebar ${paletteOpen ? 'palette-open' : ''}`}>
+          <div className="palette-mobile-header">
             <h4>Question Palette</h4>
+            <button className="close-palette-btn" onClick={() => setPaletteOpen(false)}>✕</button>
+          </div>
+          <div className="palette-section">
             <div className="palette-grid">
               {qStates.map((state, idx) => (
                 <div 
                   key={idx} 
                   className={`palette-box state-${state} ${currentQ === idx + 1 ? 'active' : ''}`}
-                  onClick={() => setCurrentQ(idx + 1)}
+                  onClick={() => {
+                    setCurrentQ(idx + 1);
+                    setPaletteOpen(false);
+                  }}
                 >
                   {idx + 1}
                 </div>
@@ -194,7 +209,7 @@ export default function MockTestEngine() {
             <div className="legend-item"><span className="box state-4">{qStates.filter(s=>s===4).length}</span> Ans & Marked</div>
           </div>
 
-          <button className="btn-engine-submit" onClick={() => setShowConfirm(true)}>
+          <button className="btn-engine-submit" onClick={() => { setPaletteOpen(false); setShowConfirm(true); }}>
             Submit Test
           </button>
         </div>

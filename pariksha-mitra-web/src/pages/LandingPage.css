@@ -33,9 +33,11 @@
 }
 
 .gov-container {
-  max-width: 1280px;
+  max-width: 1600px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0 clamp(12px, 3vw, 28px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 1. Official Tricolor Strip */
@@ -480,6 +482,7 @@
   padding: 48px 0 60px;
   position: relative;
   border-bottom: 1px solid #E2E8F0;
+  overflow: hidden;
 }
 
 .gov-hero-section::before {
@@ -1610,4 +1613,30 @@
 .cert-statement {
   color: #64748B;
   font-size: 11px;
+}
+
+@media (max-width: 640px) {
+  .gov-utility-topbar .moe-text,
+  .gov-utility-topbar .gov-sep,
+  .gov-utility-topbar .gov-text-hi {
+    display: none;
+  }
+  .utility-flex {
+    padding: 0 8px;
+  }
+  .access-label {
+    display: none;
+  }
+  .gov-hero-section {
+    padding: 24px 0 36px;
+  }
+  .hero-cta-group {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-cta-group button,
+  .hero-cta-group a {
+    width: 100%;
+    justify-content: center;
+  }
 }

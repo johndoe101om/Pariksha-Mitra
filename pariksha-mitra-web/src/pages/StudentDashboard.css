@@ -485,6 +485,12 @@
   }
 }
 
+@media (max-width: 480px) {
+  .dash-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 .metric-tile-card {
   background: white;
   border: 1px solid #E2E8F0;

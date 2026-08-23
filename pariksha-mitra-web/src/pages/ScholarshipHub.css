@@ -130,14 +130,14 @@
 /* Scholarship Cards Grid */
 .scholarship-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 20px;
 }
 
 .sch-card {
   background: #FFFFFF;
   border-radius: 18px;
-  padding: 24px;
+  padding: clamp(16px, 3vw, 24px);
   border: 1px solid #E2E8F0;
   box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -145,6 +145,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .sch-card:hover {

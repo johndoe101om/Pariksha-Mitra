@@ -434,7 +434,8 @@
   position: absolute;
   top: calc(100% + 8px);
   right: 0;
-  width: 220px;
+  width: min(240px, calc(100vw - 20px));
+  max-width: calc(100vw - 20px);
   background: white;
   border: 1px solid #CBD5E1;
   border-radius: 10px;
@@ -494,32 +495,38 @@
   flex: 1;
   overflow-y: auto;
   background-color: #F8FAFC;
-  padding: 24px 28px 60px 28px;
+  padding: clamp(14px, 2.5vw, 28px) clamp(12px, 2.5vw, 28px) 60px clamp(12px, 2.5vw, 28px);
   box-sizing: border-box;
-}
-
-@media (max-width: 768px) {
-  .ministry-content {
-    padding: 16px 16px 80px 16px;
-  }
+  width: 100%;
 }
 
 @media (max-width: 900px) {
+  .ministry-content {
+    padding: 14px 12px 60px 12px;
+  }
+
   .ministry-sidebar {
     position: fixed;
     top: 0;
-    left: -270px;
+    left: -280px;
     bottom: 0;
-    transition: left 0.3s ease;
+    width: 280px;
+    max-width: 85vw;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 4px 0 20px rgba(0, 0, 0, 0.25);
   }
   .ministry-sidebar.mobile-open {
     left: 0;
   }
   .close-menu-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .mobile-menu-btn {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
   .sidebar-overlay {
     position: fixed;
@@ -527,7 +534,36 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.4);
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2px);
     z-index: 85;
+  }
+}
+
+@media (max-width: 640px) {
+  .moe-name,
+  .utility-brand-left .sep {
+    display: none;
+  }
+  .utility-inner-content {
+    padding: 0 10px;
+  }
+  .tool-lbl {
+    display: none;
+  }
+  .cloud-indicator-tag {
+    display: none;
+  }
+  .admin-info {
+    display: none;
+  }
+  .admin-profile {
+    padding: 2px;
+  }
+  .ministry-topbar {
+    padding: 0 12px;
+  }
+  .page-sub-badge {
+    display: none;
   }
 }

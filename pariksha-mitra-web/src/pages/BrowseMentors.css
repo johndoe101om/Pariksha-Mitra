@@ -1,4 +1,4 @@
-﻿/* Browse Mentors CSS */
+/* Browse Mentors CSS */
 .browse-mentors-container {
   padding: 0;
   max-width: 1440px;
@@ -171,7 +171,8 @@
 .search-box {
   position: relative;
   flex: 1;
-  min-width: 280px;
+  min-width: 0;
+  width: 100%;
 }
 
 .search-box input {
@@ -184,6 +185,7 @@
   font-family: inherit;
   outline: none;
   transition: border-color 0.2s;
+  box-sizing: border-box;
 }
 
 .search-box input:focus {
@@ -199,15 +201,18 @@
   color: #747684;
 }
 
-.clear-search {
+.search-box .clear-btn {
   position: absolute;
   right: 12px;
   top: 50%;
   transform: translateY(-50%);
   background: none;
   border: none;
-  color: #747684;
   cursor: pointer;
+  color: #747684;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .lang-filter-select {
@@ -230,26 +235,28 @@
   cursor: pointer;
 }
 
-/* Category Pills */
-.exam-category-pills {
+/* Category Filter Pills */
+.category-pills-row {
   display: flex;
-  gap: 8px;
-  margin-bottom: 28px;
+  gap: 10px;
   overflow-x: auto;
-  padding-bottom: 4px;
+  padding-bottom: 8px;
+  margin-bottom: 24px;
+  -webkit-overflow-scrolling: touch;
 }
 
 .cat-pill {
   padding: 8px 18px;
-  background: #F1F5F9;
+  background: white;
   border: 1px solid #E2E8F0;
   border-radius: 20px;
-  font-size: 14px;
+  font-size: 13.5px;
   font-weight: 600;
   color: #475569;
   cursor: pointer;
   white-space: nowrap;
   transition: all 0.2s ease;
+  flex-shrink: 0;
 }
 
 .cat-pill:hover {
@@ -266,8 +273,8 @@
 /* Mentors Grid */
 .mentor-cards-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(360px, 1fr));
-  gap: 24px;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 300px), 1fr));
+  gap: clamp(14px, 2vw, 24px);
   margin-bottom: 40px;
 }
 
@@ -275,10 +282,11 @@
   background: white;
   border: 1px solid #E0E0E0;
   border-radius: 14px;
-  padding: 24px;
+  padding: clamp(16px, 3vw, 24px);
   display: flex;
   flex-direction: column;
   transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
 }
 
 .mentor-card:hover {

@@ -55,11 +55,17 @@
 
 .notebook-view {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 16px;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 540px) {
+  .notebook-view {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 900px) {
   .notebook-view {
     grid-template-columns: repeat(3, 1fr);
   }

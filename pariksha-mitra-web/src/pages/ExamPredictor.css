@@ -39,14 +39,14 @@
 /* 1. Top 3 KPI Showcase Grid */
 .ep-kpi-showcase-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 20px;
 }
 
 .ep-kpi-card {
   background: #FFFFFF;
   border-radius: 16px;
-  padding: 22px;
+  padding: clamp(16px, 3vw, 22px);
   border: 1px solid #E2E8F0;
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
   display: flex;
@@ -55,6 +55,7 @@
   position: relative;
   overflow: hidden;
   transition: all 0.2s ease;
+  box-sizing: border-box;
 }
 
 .ep-kpi-card:hover {

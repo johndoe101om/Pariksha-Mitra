@@ -1,4 +1,4 @@
-﻿/* ==========================================================
+/* ==========================================================
    CONSTITUENCY DASHBOARD - GIGW 3.0 STYLES
    ========================================================== */
 
@@ -112,7 +112,9 @@
   border: 1px solid #CBD5E1;
   padding: 6px 12px;
   border-radius: 6px;
-  width: 320px;
+  width: 100%;
+  max-width: 320px;
+  box-sizing: border-box;
 }
 
 .search-box-wrap input {

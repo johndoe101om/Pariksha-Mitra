@@ -639,15 +639,16 @@
 }
 
 /* Mobile Responsiveness */
-@media (max-width: 768px) {
+@media (max-width: 900px) {
   .floating-voice-root {
-    bottom: 80px;
-    right: 16px;
+    bottom: 74px;
+    right: 14px;
   }
 
   .floating-voice-root button.floating-voice-fab {
-    padding: 4px 14px 4px 4px !important;
-    min-height: 46px !important;
+    padding: 4px 12px 4px 4px !important;
+    min-height: 44px !important;
+    gap: 8px;
   }
 
   .fab-icon-wrap {
@@ -656,8 +657,26 @@
   }
 
   .floating-voice-window {
-    width: calc(100vw - 32px);
+    width: calc(100vw - 28px);
+    max-width: 380px;
     right: 0;
     height: 480px;
+    max-height: calc(100vh - 120px);
+  }
+}
+
+@media (max-width: 480px) {
+  .fab-sub-text {
+    display: none;
+  }
+  .fab-main-text {
+    font-size: 11px !important;
+  }
+  .floating-voice-root {
+    bottom: 70px;
+    right: 10px;
+  }
+  .floating-voice-window {
+    width: calc(100vw - 20px);
   }
 }

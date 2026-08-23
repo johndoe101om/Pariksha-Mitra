@@ -1,4 +1,4 @@
-﻿/* ==========================================================
+/* ==========================================================
    MINISTRY LOGIN - GIGW 3.0 SOVEREIGN DESIGN
    ========================================================== */
 
@@ -128,7 +128,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 48px 32px;
+  padding: clamp(20px, 4vw, 48px) clamp(16px, 3vw, 32px);
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .form-card-wrapper {
@@ -137,6 +139,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  box-sizing: border-box;
 }
 
 .official-security-alert {

@@ -1,4 +1,4 @@
-﻿/* Redesigned Interactive Leaderboard CSS */
+/* Redesigned Interactive Leaderboard CSS */
 .leaderboard-page-container {
   padding: 0;
   max-width: 1440px;
@@ -106,7 +106,9 @@
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   padding: 16px 20px;
-  min-width: 320px;
+  width: 100%;
+  max-width: 420px;
+  box-sizing: border-box;
 }
 
 .reward-header {
@@ -255,7 +257,9 @@
   border-radius: 8px;
   padding: 7px 12px;
   background: white;
-  min-width: 220px;
+  flex: 1;
+  min-width: 180px;
+  box-sizing: border-box;
 }
 
 .leaderboard-search-box input {
@@ -270,14 +274,17 @@
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  gap: 20px;
+  gap: clamp(6px, 2vw, 20px);
   margin: 32px 0 40px 0;
-  padding: 0 16px;
+  padding: 0 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 540px) {
   .podium-showcase-container {
-    gap: 10px;
+    gap: 4px;
+    padding: 0;
   }
 }
 

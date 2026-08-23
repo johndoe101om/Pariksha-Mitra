@@ -1,14 +1,16 @@
-﻿/* ==========================================================
+/* ==========================================================
    GEOSPATIAL MAP & INFRASTRUCTURE RADAR - STYLES
    ========================================================== */
 
 .geospatial-map-page {
-  padding: 24px 32px 48px;
+  padding: clamp(14px, 2.5vw, 24px) clamp(12px, 2vw, 32px) 48px;
   background-color: #F8FAFC;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 /* 1. Map Top Header */

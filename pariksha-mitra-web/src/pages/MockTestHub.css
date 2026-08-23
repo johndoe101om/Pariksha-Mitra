@@ -1,4 +1,4 @@
-﻿/* Redesigned Mock Test Hub CSS */
+/* Redesigned Mock Test Hub CSS */
 .mock-hub-page-container {
   padding: 0;
   max-width: 1440px;
@@ -279,7 +279,8 @@
   padding: 8px 12px;
   background: white;
   margin-left: auto;
-  min-width: 260px;
+  flex: 1;
+  min-width: 0;
 }
 
 @media (max-width: 900px) {

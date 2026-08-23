@@ -693,12 +693,29 @@
 @media (max-width: 900px) {
   .session-side-panel {
     position: absolute;
-    right: 16px;
-    top: 80px;
-    bottom: 92px;
+    right: 12px;
+    top: 70px;
+    bottom: 84px;
     z-index: 20;
-    width: calc(100vw - 32px);
+    width: calc(100vw - 24px);
     max-width: 360px;
+  }
+  .self-video-pip {
+    width: clamp(100px, 28vw, 150px);
+    height: clamp(65px, 20vw, 100px);
+    bottom: 12px;
+    right: 12px;
+  }
+}
+
+@media (max-width: 480px) {
+  .control-btn {
+    width: 38px !important;
+    height: 38px !important;
+    min-width: 38px !important;
+  }
+  .session-top-bar {
+    padding: 0 10px;
   }
 }
 
